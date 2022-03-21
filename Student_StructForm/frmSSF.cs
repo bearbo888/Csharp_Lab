@@ -12,6 +12,12 @@ namespace Student_StructForm
 {
     public partial class frmSSF : Form
     {
+        enum subject 
+        {
+            Chinese,
+            English,
+            Math
+        }
         public frmSSF()
         {
             InitializeComponent();
@@ -24,24 +30,27 @@ namespace Student_StructForm
         {
             listSub.View = View.List;
 
-            int[] score = new int[3] { chn_score, eng_score, math_score };
+            string[,] score = new string[3, 2] { {chn_score.ToString(), "Chinese"}, { eng_score.ToString(), "English" }, { math_score.ToString(), "Math" } };
 
             for(int i = 0; i < score.Length; i++)
             {
-                for(int j = 0; j < score.Length - 1; j++)
+                for(int j = 0; j < score.GetLength(0) - 1; j++)
                 {
-                    if (score[j] > score[j + 1])
+                    if (int.Parse(score[j,0]) > int.Parse(score[j + 1,0]))
                     {
-                        int temp = score[j];
-                        score[j] = score[j + 1];
-                        score[j + 1] = temp;
+                        for(int x = 0; x < 2; x++)
+                        {
+                            var temp = score[j, x];
+                            score[j, x] = score[j + 1, x];
+                            score[j + 1, x] = temp;
+                        }                       
                     }
                 }
                 
             }
 
-            listSub.Items.Add("Max Score:" + score[score.Length - 1]);
-            listSub.Items.Add("Min Score:" + score[0]);
+            listSub.Items.Add("Max Score:  "+ score[2, 1] + " " + score[2,0]);
+            listSub.Items.Add("Min Score:  "+ score[0, 1] + " " + score[0,0]);
         }
 
         private void btnShowAll_Click(object sender, EventArgs e)

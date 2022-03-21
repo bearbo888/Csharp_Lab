@@ -42,7 +42,7 @@ namespace StudentGrade
                     eng = Convert.ToDouble(tbEng.Text),
                     math = Convert.ToDouble(tbMath.Text)
                 };
-                double[] list = new double[] { stu.chn, stu.eng, stu.math };
+                string[,] list = new string[3,2] { { stu.chn.ToString(), "Chinese"}, { stu.eng.ToString(), "English"}, { stu.math.ToString(), "Math"} };
 
                 stu.CalculateTol();
                 stu.CalculateAvg();
@@ -56,8 +56,8 @@ namespace StudentGrade
                 item.SubItems.Add(stu.math.ToString());
                 item.SubItems.Add(stu.tol.ToString());
                 item.SubItems.Add(stu.avg.ToString());
-                item.SubItems.Add(list[0].ToString());
-                item.SubItems.Add(list[2].ToString());
+                item.SubItems.Add(list[0, 1] + " " + list[0, 0]);
+                item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
                 listMain.Items.Add(item);
                 count_click++;
                 btnSta.Enabled = true;
@@ -73,7 +73,7 @@ namespace StudentGrade
                 eng = rnd.Next(0, 100),
                 math = rnd.Next(0, 100)
             };
-            double[] list = new double[] { stu.chn, stu.eng, stu.math };
+            string[,] list = new string[3, 2] { { stu.chn.ToString(), "Chinese" }, { stu.eng.ToString(), "English" }, { stu.math.ToString(), "Math" } };
 
             stu.CalculateTol();
             stu.CalculateAvg();
@@ -87,8 +87,8 @@ namespace StudentGrade
             item.SubItems.Add(stu.math.ToString());
             item.SubItems.Add(stu.tol.ToString());
             item.SubItems.Add(stu.avg.ToString());
-            item.SubItems.Add(list[0].ToString());
-            item.SubItems.Add(list[2].ToString());
+            item.SubItems.Add(list[0, 1] + " " + list[0, 0]);
+            item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
             listMain.Items.Add(item);
             count_click++;
             btnSta.Enabled = true;
@@ -175,7 +175,7 @@ namespace StudentGrade
                     eng = rnd.Next(0, 100),
                     math = rnd.Next(0, 100)
                 };
-                double[] list = new double[] { stu.chn, stu.eng, stu.math };
+                string[,] list = new string[3, 2] { { stu.chn.ToString(), "Chinese" }, { stu.eng.ToString(), "English" }, { stu.math.ToString(), "Math" } };
 
                 stu.CalculateTol();
                 stu.CalculateAvg();
@@ -189,35 +189,13 @@ namespace StudentGrade
                 item.SubItems.Add(stu.math.ToString());
                 item.SubItems.Add(stu.tol.ToString());
                 item.SubItems.Add(stu.avg.ToString());
-                item.SubItems.Add(list[0].ToString());
-                item.SubItems.Add(list[2].ToString());
+                item.SubItems.Add(list[0, 1] + " " + list[0, 0]);
+                item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
                 listMain.Items.Add(item);
                 count_click++;
             }
 
             btnSta.Enabled = true;
         }
-
-        /*void resetMain()
-        {
-            listMain.Clear();
-            listMain.Columns.Add("Name");
-            listMain.Columns.Add("Chinese");
-            listMain.Columns.Add("English");
-            listMain.Columns.Add("Math");
-            listMain.Columns.Add("Total");
-            listMain.Columns.Add("AVG.");
-            listMain.Columns.Add("Min");
-            listMain.Columns.Add("Max");
-        }
-
-        void resetSub()
-        {
-            listSub.Clear();
-            listSub.Columns.Add(" ");
-            listSub.Columns.Add("Chinese");
-            listSub.Columns.Add("English");
-            listSub.Columns.Add("Math");
-        }*/
     }
 }

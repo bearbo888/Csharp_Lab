@@ -54,6 +54,25 @@ namespace StudentGrade
             }
         }
 
+        public static void BubbleSort(string[,] list)
+        {
+            for (int i = 0; i < list.Length; i++)
+            {
+                for (int j = 0; j < list.GetLength(0) - 1; j++)
+                {
+                    if (int.Parse(list[j, 0]) > int.Parse(list[j + 1, 0]))
+                    {
+                        for (int x = 0; x < 2; x++)
+                        {
+                            var temp = list[j, x];
+                            list[j, x] = list[j + 1, x];
+                            list[j + 1, x] = temp;
+                        }
+                    }
+                }
+
+            }
+        }
     }
 
 }

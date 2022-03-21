@@ -192,7 +192,7 @@ namespace StudentGrade
             this.listSub.HideSelection = false;
             this.listSub.Location = new System.Drawing.Point(169, 341);
             this.listSub.Name = "listSub";
-            this.listSub.Size = new System.Drawing.Size(488, 164);
+            this.listSub.Size = new System.Drawing.Size(564, 164);
             this.listSub.TabIndex = 22;
             this.listSub.UseCompatibleStateImageBehavior = false;
             this.listSub.View = System.Windows.Forms.View.Details;
@@ -225,7 +225,7 @@ namespace StudentGrade
             this.listMain.HideSelection = false;
             this.listMain.Location = new System.Drawing.Point(169, 12);
             this.listMain.Name = "listMain";
-            this.listMain.Size = new System.Drawing.Size(488, 316);
+            this.listMain.Size = new System.Drawing.Size(564, 316);
             this.listMain.TabIndex = 24;
             this.listMain.UseCompatibleStateImageBehavior = false;
             this.listMain.View = System.Windows.Forms.View.Details;
@@ -257,10 +257,12 @@ namespace StudentGrade
             // colmin
             // 
             this.colmin.Text = "Min.";
+            this.colmin.Width = 100;
             // 
             // colmax
             // 
             this.colmax.Text = "Max.";
+            this.colmax.Width = 100;
             // 
             // label4
             // 
@@ -322,7 +324,7 @@ namespace StudentGrade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 517);
+            this.ClientSize = new System.Drawing.Size(750, 517);
             this.Controls.Add(this.brnStatistics);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label5);
