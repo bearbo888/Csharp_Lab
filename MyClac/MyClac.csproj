@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7DD1405F-A46C-4092-9E15-DA54809ACA69}</ProjectGuid>
+    <ProjectGuid>{49338D86-DAD3-4DAA-900F-6014CEB1789F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Forms_Lab</RootNamespace>
-    <AssemblyName>Forms_Lab</AssemblyName>
+    <RootNamespace>MyClac</RootNamespace>
+    <AssemblyName>MyClac</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,89 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frmCAL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCh18.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCh18.Designer.cs">
-      <DependentUpon>frmCh18.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCh15.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCh15.Designer.cs">
-      <DependentUpon>frmCh15.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCh02.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCh02.Designer.cs">
-      <DependentUpon>frmCh02.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCh12.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCh12.Designer.cs">
-      <DependentUpon>frmCh12.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCh07.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCh07.Designer.cs">
-      <DependentUpon>frmCh07.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCh16.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCh16.Designer.cs">
-      <DependentUpon>frmCh16.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCh19.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCh19.Designer.cs">
-      <DependentUpon>frmCh19.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCh21.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCh21.Designer.cs">
-      <DependentUpon>frmCh21.cs</DependentUpon>
+    <Compile Include="frmCAL.Designer.cs">
+      <DependentUpon>frmCAL.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCh18.resx">
-      <DependentUpon>frmCh18.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCh15.resx">
-      <DependentUpon>frmCh15.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCh02.resx">
-      <DependentUpon>frmCh02.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCh12.resx">
-      <DependentUpon>frmCh12.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCh07.resx">
-      <DependentUpon>frmCh07.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCh16.resx">
-      <DependentUpon>frmCh16.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCh19.resx">
-      <DependentUpon>frmCh19.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCh21.resx">
-      <DependentUpon>frmCh21.cs</DependentUpon>
+    <EmbeddedResource Include="frmCAL.resx">
+      <DependentUpon>frmCAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

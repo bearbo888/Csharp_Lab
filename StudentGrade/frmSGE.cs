@@ -95,7 +95,7 @@ namespace StudentGrade
         }
         private void btnSta_Click(object sender, EventArgs e)
         {
-            resetSub();
+            listSub.Items.Clear();
             int suject_tol = 0;
             int eng_tol = 0;
             int ch_tol = 0;
@@ -157,8 +157,8 @@ namespace StudentGrade
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            resetMain();
-            resetSub();
+            listMain.Items.Clear();
+            listSub.Items.Clear();
             btnSta.Enabled = false;
         }
 
@@ -198,7 +198,7 @@ namespace StudentGrade
             btnSta.Enabled = true;
         }
 
-        void resetMain()
+        /*void resetMain()
         {
             listMain.Clear();
             listMain.Columns.Add("Name");
@@ -218,6 +218,6 @@ namespace StudentGrade
             listSub.Columns.Add("Chinese");
             listSub.Columns.Add("English");
             listSub.Columns.Add("Math");
-        }
+        }*/
     }
 }

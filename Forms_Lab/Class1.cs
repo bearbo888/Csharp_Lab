@@ -29,4 +29,10 @@ namespace Forms_Lab
             return val_amount;
         }
     }
+
+    struct Product
+    {
+        public string Name;
+        public int Price;
+    }
 }

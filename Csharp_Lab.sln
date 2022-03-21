@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentGrade", "StudentGrad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentGrade_List", "StudentGrade_List\StudentGrade_List.csproj", "{74C7AE3C-4E5D-48B6-82BE-2641880FFDA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Method", "Method\Method.csproj", "{F25A39D0-B3E6-41B6-9C39-10884EC54EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClac", "MyClac\MyClac.csproj", "{49338D86-DAD3-4DAA-900F-6014CEB1789F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{74C7AE3C-4E5D-48B6-82BE-2641880FFDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C7AE3C-4E5D-48B6-82BE-2641880FFDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C7AE3C-4E5D-48B6-82BE-2641880FFDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25A39D0-B3E6-41B6-9C39-10884EC54EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25A39D0-B3E6-41B6-9C39-10884EC54EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25A39D0-B3E6-41B6-9C39-10884EC54EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25A39D0-B3E6-41B6-9C39-10884EC54EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49338D86-DAD3-4DAA-900F-6014CEB1789F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49338D86-DAD3-4DAA-900F-6014CEB1789F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49338D86-DAD3-4DAA-900F-6014CEB1789F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49338D86-DAD3-4DAA-900F-6014CEB1789F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

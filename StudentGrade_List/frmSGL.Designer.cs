@@ -60,6 +60,7 @@ namespace StudentGrade
             this.tbSearchMax = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.brnStatistics = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbMath
@@ -265,7 +266,7 @@ namespace StudentGrade
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 392);
+            this.label4.Location = new System.Drawing.Point(11, 385);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 19);
             this.label4.TabIndex = 25;
@@ -273,14 +274,14 @@ namespace StudentGrade
             // 
             // tbSearchMin
             // 
-            this.tbSearchMin.Location = new System.Drawing.Point(12, 414);
+            this.tbSearchMin.Location = new System.Drawing.Point(12, 407);
             this.tbSearchMin.Name = "tbSearchMin";
             this.tbSearchMin.Size = new System.Drawing.Size(49, 22);
             this.tbSearchMin.TabIndex = 26;
             // 
             // tbSearchMax
             // 
-            this.tbSearchMax.Location = new System.Drawing.Point(94, 414);
+            this.tbSearchMax.Location = new System.Drawing.Point(94, 407);
             this.tbSearchMax.Name = "tbSearchMax";
             this.tbSearchMax.Size = new System.Drawing.Size(49, 22);
             this.tbSearchMax.TabIndex = 27;
@@ -289,7 +290,7 @@ namespace StudentGrade
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("新細明體", 20F);
-            this.label5.Location = new System.Drawing.Point(68, 409);
+            this.label5.Location = new System.Drawing.Point(68, 402);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 27);
             this.label5.TabIndex = 28;
@@ -298,7 +299,7 @@ namespace StudentGrade
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.Location = new System.Drawing.Point(12, 442);
+            this.btnSearch.Location = new System.Drawing.Point(12, 435);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(139, 32);
             this.btnSearch.TabIndex = 29;
@@ -306,11 +307,23 @@ namespace StudentGrade
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // brnStatistics
+            // 
+            this.brnStatistics.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold);
+            this.brnStatistics.Location = new System.Drawing.Point(12, 473);
+            this.brnStatistics.Name = "brnStatistics";
+            this.brnStatistics.Size = new System.Drawing.Size(139, 32);
+            this.brnStatistics.TabIndex = 30;
+            this.brnStatistics.Text = "Statistics";
+            this.brnStatistics.UseVisualStyleBackColor = true;
+            this.brnStatistics.Click += new System.EventHandler(this.brnStatistics_Click);
+            // 
             // frmSGL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 517);
+            this.Controls.Add(this.brnStatistics);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbSearchMax);
@@ -370,6 +383,7 @@ namespace StudentGrade
         private System.Windows.Forms.TextBox tbSearchMax;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button brnStatistics;
     }
 }
 

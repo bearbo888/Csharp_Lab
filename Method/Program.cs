@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Forms_Lab
+namespace Method
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Forms_Lab
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCh21()); 
+            Application.Run(new Form1());
         }
     }
 }
