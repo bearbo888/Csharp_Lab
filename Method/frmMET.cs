@@ -128,7 +128,6 @@ namespace Method
             {
                 lbResult.Text += array_str[i] + " ";
             }
-
             lbResult.Text += "]\n";
             lbResult.Text += "包含 C or c : ";
 
@@ -140,7 +139,6 @@ namespace Method
                     lbResult.Text += array_str[i] + " ";
                 }    
             }
-
             lbResult.Text += ", 總共 " + a + " 個";
         }
 
