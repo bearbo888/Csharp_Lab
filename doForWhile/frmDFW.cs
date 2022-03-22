@@ -48,50 +48,27 @@ namespace doForWhile
 
         private void btnLotto_Click(object sender, EventArgs e)
         {
-            int[] array = new int[7];
+            int[] array = new int[6];
             lbResult.Text = "樂透號碼:\n";
-
+            int i = 0;
             Class1 cs = new Class1();
 
-            for (int i = 0; i < 6; i++)
+            while (true)
             {
                 Random random = new Random();
                 int z = random.Next(1, 49);
 
-                if(cs.check(array, z))
+                if (cs.check(array, z))
                 {
                     array[i] = z;
+                    i++;
                 }
-            }
+                if (array[5] > 0) break;
+            };
 
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    int x = 0;
-                
-
-            //    if (x < i)
-            //    {
-            //        for (int j = 0; j < i; j++)
-            //        {
-            //            if (array[j] != z)
-            //            {
-            //                x++;
-            //            }
-            //        }
-            //    }
-
-
-            //    if (x == i)
-            //    {
-            //        array[x] = z;
-            //    }
-                    
-            //}
-
-            for(int j = 0; j < 6; j++)
+            for (int j = 0; j < 6; j++)
             {
-                lbResult.Text += array[j] + " ";
-                //lbResult.Text += (array[j]<10) ? "0"+array[j]+" ": array[j] + " ";
+                lbResult.Text += (array[j]<10)? "0"+array[j] + " ": array[j] + " ";
             }
         }
     }

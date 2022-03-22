@@ -18,11 +18,9 @@ namespace doForWhile
                 {
                     point++;
                 }
-            }
+            }         
 
-            //if(point)
-
-             return val;
+             return (point == 6)?!val:val;
         }
     }
 }
