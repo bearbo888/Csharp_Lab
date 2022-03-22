@@ -21,8 +21,19 @@ namespace Forms_Lab
 
         private void button1_Click(object sender, EventArgs e)
         {
-            button1.BackColor = flag ? Color.Red : Color.AliceBlue;
-            flag = !flag;
+            //button1.BackColor = flag ? Color.Red : Color.AliceBlue;
+            //flag = !flag;
+
+
+
+            Member[] arr = new Member[2];
+            arr[0] = new Member();
+            arr[0].Name = "AAA";
+
+            MessageBox.Show(arr[0].Name);
+
         }
+
+        
     }
 }

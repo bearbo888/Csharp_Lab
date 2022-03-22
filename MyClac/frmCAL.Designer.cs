@@ -29,50 +29,47 @@ namespace MyClac
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbResult = new System.Windows.Forms.TextBox();
             this.tbX = new System.Windows.Forms.TextBox();
             this.tbY = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMultiply = new System.Windows.Forms.Button();
+            this.btnDiv = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
+            this.btnEuq = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbResult
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(13, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 54);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "0";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbResult.BackColor = System.Drawing.SystemColors.Info;
+            this.tbResult.Enabled = false;
+            this.tbResult.Font = new System.Drawing.Font("微軟正黑體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbResult.Location = new System.Drawing.Point(79, 140);
+            this.tbResult.Name = "tbResult";
+            this.tbResult.Size = new System.Drawing.Size(257, 54);
+            this.tbResult.TabIndex = 0;
+            this.tbResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbX
             // 
-            this.tbX.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tbX.Location = new System.Drawing.Point(135, 73);
+            this.tbX.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbX.Location = new System.Drawing.Point(145, 19);
             this.tbX.Name = "tbX";
-            this.tbX.Size = new System.Drawing.Size(202, 57);
+            this.tbX.Size = new System.Drawing.Size(191, 50);
             this.tbX.TabIndex = 1;
             this.tbX.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tbY
             // 
-            this.tbY.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tbY.Location = new System.Drawing.Point(135, 136);
+            this.tbY.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbY.Location = new System.Drawing.Point(145, 82);
             this.tbY.Name = "tbY";
-            this.tbY.Size = new System.Drawing.Size(202, 57);
+            this.tbY.Size = new System.Drawing.Size(191, 50);
             this.tbY.TabIndex = 2;
             this.tbY.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -80,7 +77,7 @@ namespace MyClac
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(6, 81);
+            this.label1.Location = new System.Drawing.Point(5, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 40);
             this.label1.TabIndex = 3;
@@ -90,7 +87,7 @@ namespace MyClac
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(6, 151);
+            this.label2.Location = new System.Drawing.Point(6, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(124, 40);
             this.label2.TabIndex = 4;
@@ -118,121 +115,87 @@ namespace MyClac
             this.btnMinus.UseVisualStyleBackColor = true;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
-            // button3
+            // btnMultiply
             // 
-            this.button3.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(145, 210);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 60);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "*";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnMultiply.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnMultiply.Location = new System.Drawing.Point(145, 210);
+            this.btnMultiply.Name = "btnMultiply";
+            this.btnMultiply.Size = new System.Drawing.Size(60, 60);
+            this.btnMultiply.TabIndex = 7;
+            this.btnMultiply.Text = "*";
+            this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
-            // button4
+            // btnDiv
             // 
-            this.button4.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.Location = new System.Drawing.Point(211, 210);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 60);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "/";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDiv.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDiv.Location = new System.Drawing.Point(211, 210);
+            this.btnDiv.Name = "btnDiv";
+            this.btnDiv.Size = new System.Drawing.Size(60, 60);
+            this.btnDiv.TabIndex = 8;
+            this.btnDiv.Text = "/";
+            this.btnDiv.UseVisualStyleBackColor = true;
+            this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
             // 
-            // button5
+            // btnMod
             // 
-            this.button5.Enabled = false;
-            this.button5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.Location = new System.Drawing.Point(211, 276);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 60);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "√X";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnMod.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnMod.Location = new System.Drawing.Point(277, 210);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(60, 60);
+            this.btnMod.TabIndex = 9;
+            this.btnMod.Text = "%";
+            this.btnMod.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnEuq
             // 
-            this.button6.Enabled = false;
-            this.button6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button6.Location = new System.Drawing.Point(145, 276);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 60);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "X^2";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnEuq.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnEuq.Location = new System.Drawing.Point(145, 276);
+            this.btnEuq.Name = "btnEuq";
+            this.btnEuq.Size = new System.Drawing.Size(191, 64);
+            this.btnEuq.TabIndex = 17;
+            this.btnEuq.Text = "=";
+            this.btnEuq.UseVisualStyleBackColor = true;
+            this.btnEuq.Click += new System.EventHandler(this.btnEuq_Click);
             // 
-            // button7
+            // btnClear
             // 
-            this.button7.Enabled = false;
-            this.button7.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button7.Location = new System.Drawing.Point(79, 276);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 60);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "1/x";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnClear.Font = new System.Drawing.Font("微軟正黑體", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnClear.Location = new System.Drawing.Point(13, 280);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(126, 60);
+            this.btnClear.TabIndex = 19;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button8
+            // label3
             // 
-            this.button8.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button8.Location = new System.Drawing.Point(277, 210);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(60, 60);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "%";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button9.Location = new System.Drawing.Point(13, 277);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(60, 60);
-            this.button9.TabIndex = 16;
-            this.button9.Text = "Adv.";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Enabled = false;
-            this.button12.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button12.Location = new System.Drawing.Point(277, 277);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(60, 60);
-            this.button12.TabIndex = 13;
-            this.button12.Text = "log(x)";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(12, 343);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 60);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(36, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 40);
+            this.label3.TabIndex = 20;
             // 
             // frmCAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(349, 405);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(349, 356);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnEuq);
+            this.Controls.Add(this.btnMod);
+            this.Controls.Add(this.btnDiv);
+            this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbY);
             this.Controls.Add(this.tbX);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbResult);
             this.Name = "frmCAL";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -242,22 +205,19 @@ namespace MyClac
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbResult;
         private System.Windows.Forms.TextBox tbX;
         private System.Windows.Forms.TextBox tbY;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnMinus;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMultiply;
+        private System.Windows.Forms.Button btnDiv;
+        private System.Windows.Forms.Button btnMod;
+        private System.Windows.Forms.Button btnEuq;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label3;
     }
 }
 
