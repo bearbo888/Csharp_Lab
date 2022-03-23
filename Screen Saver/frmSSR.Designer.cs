@@ -57,7 +57,6 @@ namespace Screen_Saver
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSSR";
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSSR_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmSSR_KeyPress);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.frmSSR_MouseClick);

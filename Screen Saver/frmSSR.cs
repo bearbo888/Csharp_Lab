@@ -49,6 +49,7 @@ namespace Screen_Saver
         private void moveTimer_Tick(object sender, System.EventArgs e)
         {
             int width = this.Width; // get the width of Form.
+            int height = this.Height;
 
             //if (pictureBox1.Location.X > width - pictureBox1.Width) //to check condition if pic box is touch the boundroy of form width
             //{
@@ -85,13 +86,13 @@ namespace Screen_Saver
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 20, pictureBox1.Location.Y + 20);
             }*/
 
-            if (pictureBox1.Location.X > windows.Width || pictureBox1.Location.Y > windows.Height)
+            if (pictureBox1.Location.X > pictureBox1.Width || pictureBox1.Location.Y > pictureBox1.Height)
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X - 20, pictureBox1.Location.Y - 20);
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 5, pictureBox1.Location.Y - 5);
             }
             else
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X + 90, pictureBox1.Location.Y + 90);
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y + 5);
             }
 
 
