@@ -35,4 +35,10 @@ namespace Forms_Lab
         public string Name;
         public int Price;
     }
+
+    struct Emp
+    {
+        public string Name;
+        public int Age;
+    }
 }

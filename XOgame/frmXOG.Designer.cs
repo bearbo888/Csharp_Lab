@@ -159,7 +159,7 @@ namespace XOgame
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(107, 46);
             this.btnExit.TabIndex = 11;
-            this.btnExit.Text = "&Exit(e)";
+            this.btnExit.Text = "Exit(Esc)";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -180,6 +180,7 @@ namespace XOgame
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.label1);
+            this.KeyPreview = true;
             this.Name = "frmXOG";
             this.Text = "Form1";
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.frmXOG_KeyUp);

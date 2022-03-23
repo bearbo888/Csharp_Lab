@@ -61,15 +61,14 @@ namespace XOgame
         {
             Reset();
         }
-
         private void frmXOG_KeyUp(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
-                case (Keys)27:
+                case Keys.Escape:
                     Close();
                     break;
-                case (Keys)82:
+                case Keys.R:
                     Reset();
                     break;
             }
