@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoForWhile", "doForWhile\Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XOgame", "XOgame\XOgame.csproj", "{D9910519-6327-45B3-A540-3DC33EA4EFBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomePage", "HomePage\HomePage.csproj", "{65B3B1C2-9D6E-4D04-8FBB-8F07324CBD56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{D9910519-6327-45B3-A540-3DC33EA4EFBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9910519-6327-45B3-A540-3DC33EA4EFBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9910519-6327-45B3-A540-3DC33EA4EFBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65B3B1C2-9D6E-4D04-8FBB-8F07324CBD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B3B1C2-9D6E-4D04-8FBB-8F07324CBD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B3B1C2-9D6E-4D04-8FBB-8F07324CBD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B3B1C2-9D6E-4D04-8FBB-8F07324CBD56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
