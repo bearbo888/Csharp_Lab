@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,40 +10,42 @@ using System.Windows.Forms;
 
 namespace Forms_Lab
 {
-    public partial class frmCh29 : Form
+    public partial class frmCh30 : Form
     {
-        public frmCh29()
+        public frmCh30()
         {
             InitializeComponent();
         }
-
-        
+        List<Emp> list= new List<Emp>();
         void ShowEmp()
         {
             int total = 0;
             lbEmp.Text = "";
 
-            for (int i = 0; i < list.Count; i++)
+            /*foreach (int item in list)
             {
-                lbEmp.Text += "\nName：" + ((Emp)list[i]).Name + ", " + ((Emp)list[i]).Age;
-                total += ((Emp)list[i]).Age;
-            }
+                lbEmp.Text += "\nName：" + list[item].Name + ", " + ((Emp)list[i]).Age;
+                total += ((Emp)list[item.]).Age;
+            }*/
+
+
+
+            /*for (int i = 0; i < list.Count; i++)
+            {
+                
+            }*/
 
             int z = (list.Count <= 0) ? 1 : list.Count;
 
             lbEmp.Text += "\n總人數：" + list.Count + " 平均年齡：" + total / z;
         }
-
-        ArrayList list = new ArrayList();
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Emp emp;
-            emp.Name = tbName.Text;
-            emp.Age = int.Parse(tbAge.Text);
+            Emp mem;
+            mem.Name = tbName.Text;
+            mem.Age = int.Parse(tbAge.Text);
 
-            list.Add(emp);
-
+            list.Add(mem);
             ShowEmp();
         }
 
@@ -61,7 +62,9 @@ namespace Forms_Lab
 
         private void button3_Click(object sender, EventArgs e)
         {
-            list.RemoveAt(0);
+            if (list.Count>0)
+                list.RemoveAt(0);
+
             ShowEmp();
         }
 

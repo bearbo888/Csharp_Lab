@@ -32,12 +32,12 @@ namespace doForWhile
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.tbFrom = new System.Windows.Forms.TextBox();
+            this.tbTo = new System.Windows.Forms.TextBox();
+            this.tbStep = new System.Windows.Forms.TextBox();
+            this.btnFor = new System.Windows.Forms.Button();
+            this.btnWhile = new System.Windows.Forms.Button();
+            this.btnDo = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.tbXmas = new System.Windows.Forms.TextBox();
             this.btnXmas = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@ namespace doForWhile
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Form : ";
+            this.label1.Text = "From : ";
             // 
             // label2
             // 
@@ -79,59 +79,62 @@ namespace doForWhile
             this.label3.TabIndex = 2;
             this.label3.Text = "To : ";
             // 
-            // textBox1
+            // tbFrom
             // 
-            this.textBox1.Location = new System.Drawing.Point(80, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.tbFrom.Location = new System.Drawing.Point(80, 10);
+            this.tbFrom.Name = "tbFrom";
+            this.tbFrom.Size = new System.Drawing.Size(100, 22);
+            this.tbFrom.TabIndex = 3;
             // 
-            // textBox2
+            // tbTo
             // 
-            this.textBox2.Location = new System.Drawing.Point(80, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
+            this.tbTo.Location = new System.Drawing.Point(80, 40);
+            this.tbTo.Name = "tbTo";
+            this.tbTo.Size = new System.Drawing.Size(100, 22);
+            this.tbTo.TabIndex = 4;
             // 
-            // textBox3
+            // tbStep
             // 
-            this.textBox3.Location = new System.Drawing.Point(80, 70);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 5;
+            this.tbStep.Location = new System.Drawing.Point(80, 70);
+            this.tbStep.Name = "tbStep";
+            this.tbStep.Size = new System.Drawing.Size(100, 22);
+            this.tbStep.TabIndex = 5;
             // 
-            // button1
+            // btnFor
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Info;
-            this.button1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(186, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "for";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnFor.BackColor = System.Drawing.SystemColors.Info;
+            this.btnFor.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnFor.Location = new System.Drawing.Point(186, 10);
+            this.btnFor.Name = "btnFor";
+            this.btnFor.Size = new System.Drawing.Size(75, 23);
+            this.btnFor.TabIndex = 6;
+            this.btnFor.Text = "for";
+            this.btnFor.UseVisualStyleBackColor = false;
+            this.btnFor.Click += new System.EventHandler(this.btnFor_Click);
             // 
-            // button2
+            // btnWhile
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Info;
-            this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(186, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "while";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnWhile.BackColor = System.Drawing.SystemColors.Info;
+            this.btnWhile.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnWhile.Location = new System.Drawing.Point(186, 39);
+            this.btnWhile.Name = "btnWhile";
+            this.btnWhile.Size = new System.Drawing.Size(75, 23);
+            this.btnWhile.TabIndex = 7;
+            this.btnWhile.Text = "while";
+            this.btnWhile.UseVisualStyleBackColor = false;
+            this.btnWhile.Click += new System.EventHandler(this.btnWhile_Click);
             // 
-            // button3
+            // btnDo
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Info;
-            this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(186, 69);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "do";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDo.BackColor = System.Drawing.SystemColors.Info;
+            this.btnDo.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDo.Location = new System.Drawing.Point(186, 69);
+            this.btnDo.Name = "btnDo";
+            this.btnDo.Size = new System.Drawing.Size(75, 23);
+            this.btnDo.TabIndex = 8;
+            this.btnDo.Text = "do";
+            this.btnDo.UseVisualStyleBackColor = false;
+            this.btnDo.Click += new System.EventHandler(this.btnDo_Click);
             // 
             // label4
             // 
@@ -223,7 +226,7 @@ namespace doForWhile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 317);
+            this.ClientSize = new System.Drawing.Size(917, 319);
             this.Controls.Add(this.lbResult);
             this.Controls.Add(this.lbR);
             this.Controls.Add(this.btnLotto);
@@ -232,12 +235,12 @@ namespace doForWhile
             this.Controls.Add(this.btnXmas);
             this.Controls.Add(this.tbXmas);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnDo);
+            this.Controls.Add(this.btnWhile);
+            this.Controls.Add(this.btnFor);
+            this.Controls.Add(this.tbStep);
+            this.Controls.Add(this.tbTo);
+            this.Controls.Add(this.tbFrom);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -253,12 +256,12 @@ namespace doForWhile
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox tbFrom;
+        private System.Windows.Forms.TextBox tbTo;
+        private System.Windows.Forms.TextBox tbStep;
+        private System.Windows.Forms.Button btnFor;
+        private System.Windows.Forms.Button btnWhile;
+        private System.Windows.Forms.Button btnDo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbXmas;
         private System.Windows.Forms.Button btnXmas;

@@ -113,6 +113,24 @@
     <Compile Include="frmCh29.Designer.cs">
       <DependentUpon>frmCh29.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCh30.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCh30.Designer.cs">
+      <DependentUpon>frmCh30.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCh32.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCh32.Designer.cs">
+      <DependentUpon>frmCh32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCh34.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCh34.Designer.cs">
+      <DependentUpon>frmCh34.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -147,6 +165,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCh29.resx">
       <DependentUpon>frmCh29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCh30.resx">
+      <DependentUpon>frmCh30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCh32.resx">
+      <DependentUpon>frmCh32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCh34.resx">
+      <DependentUpon>frmCh34.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

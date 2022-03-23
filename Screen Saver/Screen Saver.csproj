@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{65B3B1C2-9D6E-4D04-8FBB-8F07324CBD56}</ProjectGuid>
+    <ProjectGuid>{7F63212A-4B4D-40CB-85FA-86226D805396}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HomePage</RootNamespace>
-    <AssemblyName>HomePage</AssemblyName>
+    <RootNamespace>Screen_Saver</RootNamespace>
+    <AssemblyName>Screen Saver</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmHOP.cs">
+    <Compile Include="frmSSR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHOP.Designer.cs">
-      <DependentUpon>frmHOP.cs</DependentUpon>
+    <Compile Include="frmSSR.Designer.cs">
+      <DependentUpon>frmSSR.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHOP.resx">
-      <DependentUpon>frmHOP.cs</DependentUpon>
+    <EmbeddedResource Include="frmSSR.resx">
+      <DependentUpon>frmSSR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\163723523957142_P14482525.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

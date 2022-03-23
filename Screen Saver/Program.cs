@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Forms_Lab
+namespace Screen_Saver
 {
     static class Program
     {
@@ -16,7 +16,8 @@ namespace Forms_Lab
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCh32()); 
+            Application.Run(new frmSSR());
+
         }
     }
 }

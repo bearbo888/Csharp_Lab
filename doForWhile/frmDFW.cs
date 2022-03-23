@@ -71,5 +71,54 @@ namespace doForWhile
                 lbResult.Text += (array[j]<10)? "0"+array[j] + " ": array[j] + " ";
             }
         }
+
+        private void btnFor_Click(object sender, EventArgs e)
+        {
+            int total = 0;
+            if (!String.IsNullOrWhiteSpace(tbFrom.Text) && !String.IsNullOrWhiteSpace(tbTo.Text)&&!String.IsNullOrWhiteSpace(tbStep.Text))
+            {
+                int f = int.Parse(tbFrom.Text); int t = int.Parse(tbTo.Text);int s = int.Parse(tbStep.Text);
+                for (int i=f; i <= t; i= i+s)
+                {
+                    total += f;
+                }
+
+                lbResult.Text = f + " 到 " + t + " 間隔：" + s + "\n加總為 " + total;
+            }
+        }
+
+        private void btnWhile_Click(object sender, EventArgs e)
+        {
+            int total = 0;
+            if (!String.IsNullOrWhiteSpace(tbFrom.Text) && !String.IsNullOrWhiteSpace(tbTo.Text) && !String.IsNullOrWhiteSpace(tbStep.Text))
+            {
+                int f = int.Parse(tbFrom.Text); int t = int.Parse(tbTo.Text); int s = int.Parse(tbStep.Text);
+
+                while (f<=t)
+                {
+                    total += f;
+                    f += s;
+                }
+
+                lbResult.Text = f + " 到 " + t + " 間隔：" + s + "\n加總為 " + total;
+            }
+        }
+
+        private void btnDo_Click(object sender, EventArgs e)
+        {
+            int total = 0;
+            if (!String.IsNullOrWhiteSpace(tbFrom.Text) && !String.IsNullOrWhiteSpace(tbTo.Text) && !String.IsNullOrWhiteSpace(tbStep.Text))
+            {
+                int f = int.Parse(tbFrom.Text); int t = int.Parse(tbTo.Text); int s = int.Parse(tbStep.Text);
+
+                do
+                {
+                    total += f;
+                    f += s;
+                } while (f <= t);
+
+                lbResult.Text = f + " 到 " + t + " 間隔：" + s + "\n加總為 " + total;
+            }
+        }
     }
 }
