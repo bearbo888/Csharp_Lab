@@ -20,20 +20,50 @@ namespace GUESS
             Random random = new Random();
             ans = random.Next(1, 100);
         }
-        public frmGUS(int guess)
+
+        private string strValue;
+        public string StrValue
         {
-            if (guess > ans)
+            set
             {
-                label2.Text = guess + "~100";
-            }else if (guess < ans)
-            {
-                label2.Text = "1~" + guess;
+                strValue = value;
             }
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            frmPUT input = new frmPUT(ans,win);
-            input.Show();
+            frmPUT input = new frmPUT();//例項化一個Form2視窗
+            input.Val = ans;//設定Form2中string1的值         
+            input.Show(this);
+
+            //frmPUT input = new frmPUT(ans,win);
+            //input.Owner = this;
+            //chk(strValue);
+            //input.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(ans.ToString());
+        }
+
+        void chk(string val)
+        {
+            if (!String.IsNullOrWhiteSpace(val))
+            {
+                if (int.Parse(val) > ans)
+                {
+                    label2.Text = strValue + "~100";
+                }
+                else if (int.Parse(val) < ans)
+                {
+                    label2.Text = "1~" + strValue;
+                }
+            }
+        }
+
+        private void frmGUS_Load(object sender, EventArgs e)
+        {
+            chk(strValue);
         }
     }
 }

@@ -13,9 +13,12 @@ namespace GUESS
     public partial class frmPUT : Form
     {
         int x = 0;
-        public frmPUT(int ans, bool win)
+        public frmPUT()
         {
             InitializeComponent();
+        }
+        public frmPUT(int ans, bool win)
+        {
             x = ans;
         }
 
@@ -26,8 +29,26 @@ namespace GUESS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmGUS guess = new frmGUS(int.Parse(textBox1.Text));
-            
+            frmGUS guess = (frmGUS)this.Owner;
+            //guess.StrValue = textBox1.Text;//使用父視窗指標賦值
+
+            //((TextBox)guess.Controls["textBox1"]).Text = this.textBox1.Text;
+
+            guess.StrValue = this.textBox1.Text;
+            this.Close();
         }
+
+        private int val;
+        public int Val
+        {
+            set
+            {
+                val = value;
+            }
+        }
+        /*public void SetValue()
+        {
+            this.textBox1.Text = val.ToString();
+        }*/
     }
 }
