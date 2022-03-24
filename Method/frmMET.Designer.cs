@@ -1,7 +1,7 @@
 ﻿
 namespace Method
 {
-    partial class Form1
+    partial class frmMET
     {
         /// <summary>
         /// 設計工具所需的變數。

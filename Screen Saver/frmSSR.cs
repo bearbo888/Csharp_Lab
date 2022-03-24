@@ -9,7 +9,10 @@ namespace Screen_Saver
         public frmSSR()
         {
             InitializeComponent();
-            //得到計算機螢幕的工作區域
+
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(this.panel1.Width, this.panel1.Height);
         }
         private Point mouseLocation;
         private void frmSSR_MouseMove(object sender, MouseEventArgs e)
@@ -51,15 +54,6 @@ namespace Screen_Saver
             int width = this.Width; // get the width of Form.
             int height = this.Height;
 
-            //if (pictureBox1.Location.X > width - pictureBox1.Width) //to check condition if pic box is touch the boundroy of form width
-            //{
-            //    pictureBox1.Location = new Point(1, pictureBox1.Location.Y); // pic box is set to the new point. here 1 is indicate of X coordinate.
-            //}
-            //else
-            //{
-            //     // to move picture box from x coordinate by 100 Point.
-            //}
-
             int iDistance = 0; int speed = 2;
             Rectangle windows = Screen.GetWorkingArea(this);
             //pictureBox1.Location = new Point(0 , pictureBox1.Location.Y);
@@ -86,9 +80,21 @@ namespace Screen_Saver
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 20, pictureBox1.Location.Y + 20);
             }*/
 
-            if (pictureBox1.Location.X > pictureBox1.Width || pictureBox1.Location.Y > pictureBox1.Height)
+            if (pictureBox1.Location.X > this.Width)
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X - 5, pictureBox1.Location.Y - 5);
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 5, pictureBox1.Location.Y + 5);
+            }
+            else if (pictureBox1.Location.Y > this.Height)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y - 5);
+            }
+            else if (pictureBox1.Location.X < 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y - 5);
+            }
+            else if (pictureBox1.Location.Y < 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y + 5);
             }
             else
             {
@@ -104,5 +110,12 @@ namespace Screen_Saver
             //pictureBox1.Top = rand.Next(Math.Max(1, Bounds.Height - pictureBox1.Height));
         }
 
+        private void panel1_AutoSizeChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Left = 0;
+            pictureBox1.Top = 0;
+            pictureBox1.Width = panel1.Width;
+            pictureBox1.Height = panel1.Height;
+        }
     }
 }

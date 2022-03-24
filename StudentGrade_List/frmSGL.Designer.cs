@@ -1,5 +1,5 @@
 ﻿
-namespace StudentGrade
+namespace StudentGrade_List
 {
     partial class frmSGL
     {

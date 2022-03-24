@@ -1,7 +1,8 @@
-﻿using System;
+﻿using StudentGrade;
+using System;
 using System.Windows.Forms;
 
-namespace StudentGrade
+namespace StudentGrade_List
 {
     public partial class frmSGL : Form
     {

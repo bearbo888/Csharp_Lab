@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{74C7AE3C-4E5D-48B6-82BE-2641880FFDA2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>StudentGrade</RootNamespace>
-    <AssemblyName>StudentGrade</AssemblyName>
+    <RootNamespace>StudentGrade_List</RootNamespace>
+    <AssemblyName>StudentGrade_List</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -66,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -19,7 +19,7 @@ namespace Forms_Lab
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            Form1 fm = new Form1();
+            frmHLO fm = new frmHLO();
             fm.Show();
         }
 

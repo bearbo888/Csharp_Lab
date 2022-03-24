@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{65B3B1C2-9D6E-4D04-8FBB-8F07324CBD56}</ProjectGuid>
+    <ProjectGuid>{BE59EB91-19CF-4BD4-AA2A-5EB4FEF70251}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>HomePage</RootNamespace>
-    <AssemblyName>HomePage</AssemblyName>
+    <RootNamespace>Notepad</RootNamespace>
+    <AssemblyName>Notepad</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,16 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmHOP.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHOP.Designer.cs">
-      <DependentUpon>frmHOP.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmHOP.resx">
-      <DependentUpon>frmHOP.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +66,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -80,50 +82,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\doForWhile\DoForWhile.csproj">
-      <Project>{b53f2d5b-ceb2-4df8-83db-2eaa1560b647}</Project>
-      <Name>DoForWhile</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Forms_Lab\Forms_Lab.csproj">
-      <Project>{7DD1405F-A46C-4092-9E15-DA54809ACA69}</Project>
-      <Name>Forms_Lab</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Loan_Lab\Loan.csproj">
-      <Project>{8B30C275-8F03-45C6-9E4D-D0C999F0764F}</Project>
-      <Name>Loan</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Method\Method.csproj">
-      <Project>{f25a39d0-b3e6-41b6-9c39-10884ec54ea0}</Project>
-      <Name>Method</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyClac\MyClac.csproj">
-      <Project>{49338d86-dad3-4daa-900f-6014ceb1789f}</Project>
-      <Name>MyClac</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\POS_Lab\POS.csproj">
-      <Project>{1C6E5319-10F6-4A9E-879C-63A5C879837F}</Project>
-      <Name>POS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Screen Saver\Screen Saver.csproj">
-      <Project>{7F63212A-4B4D-40CB-85FA-86226D805396}</Project>
-      <Name>Screen Saver</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StudentGrade\StudentGrade.csproj">
-      <Project>{90EF381C-613C-4257-ACE2-AC0407634A89}</Project>
-      <Name>StudentGrade</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StudentGrade_List\StudentGrade_List.csproj">
-      <Project>{74c7ae3c-4e5d-48b6-82be-2641880ffda2}</Project>
-      <Name>StudentGrade_List</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Student_StructForm\Student_StructForm.csproj">
-      <Project>{039E7C7A-D23C-4F56-AA09-EA8BFC1B1186}</Project>
-      <Name>Student_StructForm</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\XOgame\XOgame.csproj">
-      <Project>{d9910519-6327-45b3-a540-3dc33ea4efba}</Project>
-      <Name>XOgame</Name>
-    </ProjectReference>
+    <None Include="bin\Debug\redo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\undo.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

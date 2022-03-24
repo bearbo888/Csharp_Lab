@@ -32,20 +32,22 @@ namespace HomePage
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHOP));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.btnXO = new System.Windows.Forms.Button();
+            this.btnDO = new System.Windows.Forms.Button();
+            this.btnCalc = new System.Windows.Forms.Button();
+            this.btnMethod = new System.Windows.Forms.Button();
+            this.btnSGL = new System.Windows.Forms.Button();
+            this.btnSG = new System.Windows.Forms.Button();
+            this.btnSSF = new System.Windows.Forms.Button();
+            this.btnPOS = new System.Windows.Forms.Button();
+            this.btnLoan = new System.Windows.Forms.Button();
+            this.btnHello = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -64,6 +66,7 @@ namespace HomePage
             // 
             this.splitContainer1.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel1.BackgroundImage")));
             this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
@@ -85,17 +88,17 @@ namespace HomePage
             this.splitContainer2.Panel1.Controls.Add(this.button13);
             this.splitContainer2.Panel1.Controls.Add(this.button12);
             this.splitContainer2.Panel1.Controls.Add(this.button11);
-            this.splitContainer2.Panel1.Controls.Add(this.button10);
-            this.splitContainer2.Panel1.Controls.Add(this.button9);
-            this.splitContainer2.Panel1.Controls.Add(this.button8);
-            this.splitContainer2.Panel1.Controls.Add(this.button7);
-            this.splitContainer2.Panel1.Controls.Add(this.button6);
-            this.splitContainer2.Panel1.Controls.Add(this.button5);
-            this.splitContainer2.Panel1.Controls.Add(this.button4);
-            this.splitContainer2.Panel1.Controls.Add(this.button3);
-            this.splitContainer2.Panel1.Controls.Add(this.button2);
-            this.splitContainer2.Panel1.Controls.Add(this.button1);
-            this.splitContainer2.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel1_Paint);
+            this.splitContainer2.Panel1.Controls.Add(this.btnXO);
+            this.splitContainer2.Panel1.Controls.Add(this.btnDO);
+            this.splitContainer2.Panel1.Controls.Add(this.btnCalc);
+            this.splitContainer2.Panel1.Controls.Add(this.btnMethod);
+            this.splitContainer2.Panel1.Controls.Add(this.btnSGL);
+            this.splitContainer2.Panel1.Controls.Add(this.btnSG);
+            this.splitContainer2.Panel1.Controls.Add(this.btnSSF);
+            this.splitContainer2.Panel1.Controls.Add(this.btnPOS);
+            this.splitContainer2.Panel1.Controls.Add(this.btnLoan);
+            this.splitContainer2.Panel1.Controls.Add(this.btnHello);
+            this.splitContainer2.Panel1.Resize += new System.EventHandler(this.splitContainer2_Panel1_Resize);
             // 
             // splitContainer2.Panel2
             // 
@@ -105,128 +108,9 @@ namespace HomePage
             this.splitContainer2.SplitterDistance = 251;
             this.splitContainer2.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(12, 41);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(13, 70);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.AutoSize = true;
-            this.button4.Location = new System.Drawing.Point(12, 99);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(225, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.AutoSize = true;
-            this.button5.Location = new System.Drawing.Point(13, 128);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(225, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.AutoSize = true;
-            this.button6.Location = new System.Drawing.Point(13, 157);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(225, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.AutoSize = true;
-            this.button7.Location = new System.Drawing.Point(13, 186);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(225, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.AutoSize = true;
-            this.button8.Location = new System.Drawing.Point(13, 215);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(225, 23);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.AutoSize = true;
-            this.button9.Location = new System.Drawing.Point(13, 244);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(225, 23);
-            this.button9.TabIndex = 7;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.AutoSize = true;
-            this.button10.Location = new System.Drawing.Point(13, 273);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(225, 23);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.AutoSize = true;
-            this.button11.Location = new System.Drawing.Point(13, 302);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(225, 23);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.AutoSize = true;
-            this.button12.Location = new System.Drawing.Point(12, 331);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(225, 23);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // button13
             // 
+            this.button13.AutoEllipsis = true;
             this.button13.AutoSize = true;
             this.button13.Location = new System.Drawing.Point(13, 360);
             this.button13.Name = "button13";
@@ -235,15 +119,170 @@ namespace HomePage
             this.button13.Text = "button13";
             this.button13.UseVisualStyleBackColor = true;
             // 
+            // button12
+            // 
+            this.button12.AutoEllipsis = true;
+            this.button12.AutoSize = true;
+            this.button12.Location = new System.Drawing.Point(12, 331);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(225, 23);
+            this.button12.TabIndex = 10;
+            this.button12.Text = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.AutoEllipsis = true;
+            this.button11.AutoSize = true;
+            this.button11.Location = new System.Drawing.Point(13, 302);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(225, 23);
+            this.button11.TabIndex = 9;
+            this.button11.Text = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // btnXO
+            // 
+            this.btnXO.AutoEllipsis = true;
+            this.btnXO.AutoSize = true;
+            this.btnXO.Location = new System.Drawing.Point(13, 273);
+            this.btnXO.Name = "btnXO";
+            this.btnXO.Size = new System.Drawing.Size(225, 23);
+            this.btnXO.TabIndex = 8;
+            this.btnXO.Text = "0716_XOGame";
+            this.btnXO.UseVisualStyleBackColor = true;
+            this.btnXO.Click += new System.EventHandler(this.btnXO_Click);
+            // 
+            // btnDO
+            // 
+            this.btnDO.AutoEllipsis = true;
+            this.btnDO.AutoSize = true;
+            this.btnDO.Location = new System.Drawing.Point(13, 244);
+            this.btnDO.Name = "btnDO";
+            this.btnDO.Size = new System.Drawing.Size(225, 23);
+            this.btnDO.TabIndex = 7;
+            this.btnDO.Text = "0712_ForDoWhile";
+            this.btnDO.UseVisualStyleBackColor = true;
+            this.btnDO.Click += new System.EventHandler(this.btnDO_Click);
+            // 
+            // btnCalc
+            // 
+            this.btnCalc.AutoEllipsis = true;
+            this.btnCalc.AutoSize = true;
+            this.btnCalc.Location = new System.Drawing.Point(13, 215);
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.Size = new System.Drawing.Size(225, 23);
+            this.btnCalc.TabIndex = 1;
+            this.btnCalc.Text = "0711_MyClac";
+            this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
+            // 
+            // btnMethod
+            // 
+            this.btnMethod.AutoEllipsis = true;
+            this.btnMethod.AutoSize = true;
+            this.btnMethod.Location = new System.Drawing.Point(13, 186);
+            this.btnMethod.Name = "btnMethod";
+            this.btnMethod.Size = new System.Drawing.Size(225, 23);
+            this.btnMethod.TabIndex = 6;
+            this.btnMethod.Text = "0711_Method";
+            this.btnMethod.UseVisualStyleBackColor = true;
+            this.btnMethod.Click += new System.EventHandler(this.btnMethod_Click);
+            // 
+            // btnSGL
+            // 
+            this.btnSGL.AutoEllipsis = true;
+            this.btnSGL.AutoSize = true;
+            this.btnSGL.Location = new System.Drawing.Point(13, 157);
+            this.btnSGL.Name = "btnSGL";
+            this.btnSGL.Size = new System.Drawing.Size(225, 23);
+            this.btnSGL.TabIndex = 5;
+            this.btnSGL.Text = "0710_StudentGrade_List";
+            this.btnSGL.UseVisualStyleBackColor = true;
+            this.btnSGL.Click += new System.EventHandler(this.btnSGL_Click);
+            // 
+            // btnSG
+            // 
+            this.btnSG.AutoEllipsis = true;
+            this.btnSG.AutoSize = true;
+            this.btnSG.Location = new System.Drawing.Point(13, 128);
+            this.btnSG.Name = "btnSG";
+            this.btnSG.Size = new System.Drawing.Size(225, 23);
+            this.btnSG.TabIndex = 4;
+            this.btnSG.Text = "0709_StudentGrade";
+            this.btnSG.UseVisualStyleBackColor = true;
+            this.btnSG.Click += new System.EventHandler(this.btnSG_Click);
+            // 
+            // btnSSF
+            // 
+            this.btnSSF.AutoEllipsis = true;
+            this.btnSSF.AutoSize = true;
+            this.btnSSF.Location = new System.Drawing.Point(12, 99);
+            this.btnSSF.Name = "btnSSF";
+            this.btnSSF.Size = new System.Drawing.Size(225, 23);
+            this.btnSSF.TabIndex = 3;
+            this.btnSSF.Text = "0708_Student_StructForm";
+            this.btnSSF.UseVisualStyleBackColor = true;
+            this.btnSSF.Click += new System.EventHandler(this.btnSSF_Click);
+            // 
+            // btnPOS
+            // 
+            this.btnPOS.AutoEllipsis = true;
+            this.btnPOS.AutoSize = true;
+            this.btnPOS.Location = new System.Drawing.Point(13, 70);
+            this.btnPOS.Name = "btnPOS";
+            this.btnPOS.Size = new System.Drawing.Size(225, 23);
+            this.btnPOS.TabIndex = 2;
+            this.btnPOS.Text = "0705_POS";
+            this.btnPOS.UseVisualStyleBackColor = true;
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
+            // 
+            // btnLoan
+            // 
+            this.btnLoan.AutoEllipsis = true;
+            this.btnLoan.AutoSize = true;
+            this.btnLoan.Location = new System.Drawing.Point(12, 41);
+            this.btnLoan.Name = "btnLoan";
+            this.btnLoan.Size = new System.Drawing.Size(225, 23);
+            this.btnLoan.TabIndex = 1;
+            this.btnLoan.Text = "0704_Loan";
+            this.btnLoan.UseVisualStyleBackColor = true;
+            this.btnLoan.Click += new System.EventHandler(this.btnLoan_Click);
+            // 
+            // btnHello
+            // 
+            this.btnHello.AutoEllipsis = true;
+            this.btnHello.AutoSize = true;
+            this.btnHello.Location = new System.Drawing.Point(12, 12);
+            this.btnHello.Name = "btnHello";
+            this.btnHello.Size = new System.Drawing.Size(225, 23);
+            this.btnHello.TabIndex = 0;
+            this.btnHello.Text = "0703_Hello";
+            this.btnHello.UseVisualStyleBackColor = true;
+            this.btnHello.Click += new System.EventHandler(this.btnHello_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("標楷體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(57, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "C# 作業";
+            // 
             // frmHOP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(998, 627);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmHOP";
             this.Text = "Form1";
+            this.AutoSizeChanged += new System.EventHandler(this.frmHOP_AutoSizeChanged);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -262,16 +301,17 @@ namespace HomePage
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnXO;
+        private System.Windows.Forms.Button btnDO;
+        private System.Windows.Forms.Button btnCalc;
+        private System.Windows.Forms.Button btnMethod;
+        private System.Windows.Forms.Button btnSGL;
+        private System.Windows.Forms.Button btnSG;
+        private System.Windows.Forms.Button btnSSF;
+        private System.Windows.Forms.Button btnPOS;
+        private System.Windows.Forms.Button btnLoan;
+        private System.Windows.Forms.Button btnHello;
+        private System.Windows.Forms.Label label1;
     }
 }
 

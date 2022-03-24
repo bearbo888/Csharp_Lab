@@ -1,7 +1,7 @@
 ﻿
 namespace Forms_Lab
 {
-    partial class Form1
+    partial class frmHLO
     {
         /// <summary>
         /// 設計工具所需的變數。

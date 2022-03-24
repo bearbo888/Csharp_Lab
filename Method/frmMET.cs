@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Method
 {
-    public partial class Form1 : Form
+    public partial class frmMET : Form
     {
-        public Form1()
+        public frmMET()
         {
             InitializeComponent();
         }

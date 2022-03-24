@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Method
+namespace Notepad
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Method
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMET());
+            Application.Run(new Form1());
         }
     }
 }
