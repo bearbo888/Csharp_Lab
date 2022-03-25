@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUESS
 {
     public partial class frmGUS : Form
     {
-        int ans = 0; bool win = false;
+        int ans = 0; int preAns = 0; bool chk = true;
 
         public frmGUS()
         {
@@ -20,50 +13,54 @@ namespace GUESS
             Random random = new Random();
             ans = random.Next(1, 100);
         }
-
-        private string strValue;
-        public string StrValue
+        private void btnGuess_Click(object sender, EventArgs e)
         {
-            set
-            {
-                strValue = value;
-            }
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmPUT input = new frmPUT();//例項化一個Form2視窗
-            input.Val = ans;//設定Form2中string1的值         
+            frmPUT input = new frmPUT();
+            input.Owner = this;      
             input.Show(this);
-
-            //frmPUT input = new frmPUT(ans,win);
-            //input.Owner = this;
-            //chk(strValue);
-            //input.Show();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        public void chkans(string strValue)
         {
-            MessageBox.Show(ans.ToString());
-        }
-
-        void chk(string val)
-        {
-            if (!String.IsNullOrWhiteSpace(val))
+            if (!String.IsNullOrWhiteSpace(strValue))
             {
-                if (int.Parse(val) > ans)
+                if (int.Parse(strValue) > ans && preAns == 0 )
                 {
-                    label2.Text = strValue + "~100";
+                    label2.Text = "TO LARGE!!!!\n1~" + strValue;
                 }
-                else if (int.Parse(val) < ans)
+                else if (int.Parse(strValue) < ans && preAns == 0)
                 {
-                    label2.Text = "1~" + strValue;
+                    label2.Text = "TO SMALL!!!!\n" + strValue + "~100";
                 }
+                else if (int.Parse(strValue) < ans && preAns > 0 && int.Parse(strValue)> preAns)
+                {
+                    label2.Text = "TO !!!!\n" + preAns + "~" + strValue;
+
+                }
+                else if (int.Parse(strValue) > ans && preAns > 0 && int.Parse(strValue) < preAns)
+                {
+                    label2.Text = "TO!!!!\n" + strValue + "~" + preAns;
+                }
+                else if(int.Parse(strValue) == ans)
+                {
+                    label2.Text = "";
+                    MessageBox.Show("WINNNNNNNNNNNNNNNNNNNNNNNNNN");
+                }
+                else
+                {
+                    chk = !chk;
+                    MessageBox.Show("XXX:"+preAns.ToString());
+                }
+                if (chk) { 
+                    preAns = int.Parse(strValue);
+                    MessageBox.Show(preAns.ToString());
+                }
+                
             }
         }
 
-        private void frmGUS_Load(object sender, EventArgs e)
+        private void btnShowAns_Click(object sender, EventArgs e)
         {
-            chk(strValue);
+            MessageBox.Show("答案是: "+ ans.ToString());
         }
     }
 }

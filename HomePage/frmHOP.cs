@@ -11,6 +11,7 @@ using XOgame;
 using System;
 using System.Windows.Forms;
 using MyClac;
+using GUESS;
 
 namespace HomePage
 {
@@ -149,6 +150,19 @@ namespace HomePage
             btnSSF.Width = splitContainer2.Panel1.Width - 20;
             btnXO.Width = splitContainer2.Panel1.Width - 20;
             btnSG.Width = splitContainer2.Panel1.Width - 20;
+            btnGuess.Width = splitContainer2.Panel1.Width - 20;
+        }
+
+        private void btnGuess_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            frmGUS frm = new frmGUS();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.AutoScroll = true;
+            //frm.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(frm);
+            frm.Show();
         }
     }
 }

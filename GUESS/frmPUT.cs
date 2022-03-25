@@ -1,54 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace GUESS
 {
     public partial class frmPUT : Form
     {
-        int x = 0;
         public frmPUT()
         {
             InitializeComponent();
         }
-        public frmPUT(int ans, bool win)
-        {
-            x = ans;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSendans_Click(object sender, EventArgs e)
         {
             frmGUS guess = (frmGUS)this.Owner;
-            //guess.StrValue = textBox1.Text;//使用父視窗指標賦值
-
-            //((TextBox)guess.Controls["textBox1"]).Text = this.textBox1.Text;
-
-            guess.StrValue = this.textBox1.Text;
-            this.Close();
+            guess.chkans(this.textBox1.Text);
         }
 
-        private int val;
-        public int Val
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            set
-            {
-                val = value;
-            }
+            //if((Regex.IsMatch(textBox1.Text, @"^(?=.*\d).{1,3}$")) == false)
+            //{
+            //    textBox1.Text = "";
+            //    MessageBox.Show("請輸入1~100數字");
+            //}
         }
-        /*public void SetValue()
-        {
-            this.textBox1.Text = val.ToString();
-        }*/
     }
 }

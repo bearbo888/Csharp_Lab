@@ -88,6 +88,10 @@
       <Project>{7DD1405F-A46C-4092-9E15-DA54809ACA69}</Project>
       <Name>Forms_Lab</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GUESS\GUESS.csproj">
+      <Project>{687736CF-7548-4E9E-A485-555325D7A0C2}</Project>
+      <Name>GUESS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Loan_Lab\Loan.csproj">
       <Project>{8B30C275-8F03-45C6-9E4D-D0C999F0764F}</Project>
       <Name>Loan</Name>

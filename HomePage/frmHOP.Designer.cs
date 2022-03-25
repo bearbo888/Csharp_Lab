@@ -31,10 +31,11 @@ namespace HomePage
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHOP));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnGuess = new System.Windows.Forms.Button();
             this.btnXO = new System.Windows.Forms.Button();
             this.btnDO = new System.Windows.Forms.Button();
             this.btnCalc = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace HomePage
             this.btnPOS = new System.Windows.Forms.Button();
             this.btnLoan = new System.Windows.Forms.Button();
             this.btnHello = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -75,6 +75,16 @@ namespace HomePage
             this.splitContainer1.SplitterDistance = 128;
             this.splitContainer1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("標楷體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(57, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "C# 作業";
+            // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -87,7 +97,7 @@ namespace HomePage
             this.splitContainer2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer2.Panel1.Controls.Add(this.button13);
             this.splitContainer2.Panel1.Controls.Add(this.button12);
-            this.splitContainer2.Panel1.Controls.Add(this.button11);
+            this.splitContainer2.Panel1.Controls.Add(this.btnGuess);
             this.splitContainer2.Panel1.Controls.Add(this.btnXO);
             this.splitContainer2.Panel1.Controls.Add(this.btnDO);
             this.splitContainer2.Panel1.Controls.Add(this.btnCalc);
@@ -110,7 +120,6 @@ namespace HomePage
             // 
             // button13
             // 
-            this.button13.AutoEllipsis = true;
             this.button13.AutoSize = true;
             this.button13.Location = new System.Drawing.Point(13, 360);
             this.button13.Name = "button13";
@@ -121,7 +130,6 @@ namespace HomePage
             // 
             // button12
             // 
-            this.button12.AutoEllipsis = true;
             this.button12.AutoSize = true;
             this.button12.Location = new System.Drawing.Point(12, 331);
             this.button12.Name = "button12";
@@ -130,20 +138,19 @@ namespace HomePage
             this.button12.Text = "button12";
             this.button12.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnGuess
             // 
-            this.button11.AutoEllipsis = true;
-            this.button11.AutoSize = true;
-            this.button11.Location = new System.Drawing.Point(13, 302);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(225, 23);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnGuess.AutoSize = true;
+            this.btnGuess.Location = new System.Drawing.Point(13, 302);
+            this.btnGuess.Name = "btnGuess";
+            this.btnGuess.Size = new System.Drawing.Size(225, 23);
+            this.btnGuess.TabIndex = 9;
+            this.btnGuess.Text = "GUESS";
+            this.btnGuess.UseVisualStyleBackColor = true;
+            this.btnGuess.Click += new System.EventHandler(this.btnGuess_Click);
             // 
             // btnXO
             // 
-            this.btnXO.AutoEllipsis = true;
             this.btnXO.AutoSize = true;
             this.btnXO.Location = new System.Drawing.Point(13, 273);
             this.btnXO.Name = "btnXO";
@@ -155,7 +162,6 @@ namespace HomePage
             // 
             // btnDO
             // 
-            this.btnDO.AutoEllipsis = true;
             this.btnDO.AutoSize = true;
             this.btnDO.Location = new System.Drawing.Point(13, 244);
             this.btnDO.Name = "btnDO";
@@ -167,7 +173,6 @@ namespace HomePage
             // 
             // btnCalc
             // 
-            this.btnCalc.AutoEllipsis = true;
             this.btnCalc.AutoSize = true;
             this.btnCalc.Location = new System.Drawing.Point(13, 215);
             this.btnCalc.Name = "btnCalc";
@@ -179,7 +184,6 @@ namespace HomePage
             // 
             // btnMethod
             // 
-            this.btnMethod.AutoEllipsis = true;
             this.btnMethod.AutoSize = true;
             this.btnMethod.Location = new System.Drawing.Point(13, 186);
             this.btnMethod.Name = "btnMethod";
@@ -191,7 +195,6 @@ namespace HomePage
             // 
             // btnSGL
             // 
-            this.btnSGL.AutoEllipsis = true;
             this.btnSGL.AutoSize = true;
             this.btnSGL.Location = new System.Drawing.Point(13, 157);
             this.btnSGL.Name = "btnSGL";
@@ -203,7 +206,6 @@ namespace HomePage
             // 
             // btnSG
             // 
-            this.btnSG.AutoEllipsis = true;
             this.btnSG.AutoSize = true;
             this.btnSG.Location = new System.Drawing.Point(13, 128);
             this.btnSG.Name = "btnSG";
@@ -215,7 +217,6 @@ namespace HomePage
             // 
             // btnSSF
             // 
-            this.btnSSF.AutoEllipsis = true;
             this.btnSSF.AutoSize = true;
             this.btnSSF.Location = new System.Drawing.Point(12, 99);
             this.btnSSF.Name = "btnSSF";
@@ -227,7 +228,6 @@ namespace HomePage
             // 
             // btnPOS
             // 
-            this.btnPOS.AutoEllipsis = true;
             this.btnPOS.AutoSize = true;
             this.btnPOS.Location = new System.Drawing.Point(13, 70);
             this.btnPOS.Name = "btnPOS";
@@ -239,7 +239,6 @@ namespace HomePage
             // 
             // btnLoan
             // 
-            this.btnLoan.AutoEllipsis = true;
             this.btnLoan.AutoSize = true;
             this.btnLoan.Location = new System.Drawing.Point(12, 41);
             this.btnLoan.Name = "btnLoan";
@@ -251,7 +250,6 @@ namespace HomePage
             // 
             // btnHello
             // 
-            this.btnHello.AutoEllipsis = true;
             this.btnHello.AutoSize = true;
             this.btnHello.Location = new System.Drawing.Point(12, 12);
             this.btnHello.Name = "btnHello";
@@ -260,16 +258,6 @@ namespace HomePage
             this.btnHello.Text = "0703_Hello";
             this.btnHello.UseVisualStyleBackColor = true;
             this.btnHello.Click += new System.EventHandler(this.btnHello_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("標楷體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(57, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "C# 作業";
             // 
             // frmHOP
             // 
@@ -300,7 +288,7 @@ namespace HomePage
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnGuess;
         private System.Windows.Forms.Button btnXO;
         private System.Windows.Forms.Button btnDO;
         private System.Windows.Forms.Button btnCalc;

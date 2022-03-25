@@ -33,16 +33,15 @@ namespace GUESS
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(58, 72);
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(56, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 34);
+            this.label1.Size = new System.Drawing.Size(266, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "猜一下(1~100)";
             // 
@@ -55,18 +54,18 @@ namespace GUESS
             this.button1.TabIndex = 1;
             this.button1.Text = "GUESS";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnGuess_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("新細明體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(186, 286);
+            this.button2.Location = new System.Drawing.Point(211, 286);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(111, 56);
             this.button2.TabIndex = 2;
             this.button2.Text = "Answer";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.btnShowAns_Click);
             // 
             // label2
             // 
@@ -74,30 +73,20 @@ namespace GUESS
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.Location = new System.Drawing.Point(58, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 34);
+            this.label2.Size = new System.Drawing.Size(0, 34);
             this.label2.TabIndex = 3;
-            this.label2.Text = "猜一下(1~100)";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(64, 234);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
             // 
             // frmGUS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(387, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "frmGUS";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmGUS_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,7 +98,6 @@ namespace GUESS
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

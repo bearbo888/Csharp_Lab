@@ -15,11 +15,9 @@ namespace XOgame
         public frmXOG()
         {
             InitializeComponent();
-
         }
 
         bool val = false; int count = 0;
-
         private void button3_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender;
@@ -73,7 +71,6 @@ namespace XOgame
                     break;
             }
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
