@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUESS
 {
     public partial class frmGUS : Form
     {
-        int ans = 0; bool win = false;
+        int ans = 0; int preAns = 0;
+        int floor = 1; int celling = 100;
 
         public frmGUS()
         {
@@ -20,50 +14,42 @@ namespace GUESS
             Random random = new Random();
             ans = random.Next(1, 100);
         }
-
-        private string strValue;
-        public string StrValue
+        private void btnGuess_Click(object sender, EventArgs e)
         {
-            set
-            {
-                strValue = value;
-            }
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmPUT input = new frmPUT();//例項化一個Form2視窗
-            input.Val = ans;//設定Form2中string1的值         
+            frmPUT input = new frmPUT();
+            input.Owner = this;      
             input.Show(this);
-
-            //frmPUT input = new frmPUT(ans,win);
-            //input.Owner = this;
-            //chk(strValue);
-            //input.Show();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        public void chkans(string guessnumber)
         {
-            MessageBox.Show(ans.ToString());
-        }
-
-        void chk(string val)
-        {
-            if (!String.IsNullOrWhiteSpace(val))
+            if (!String.IsNullOrWhiteSpace(guessnumber))
             {
-                if (int.Parse(val) > ans)
+                int guessNum = int.Parse(guessnumber);
+                if(guessNum < ans && floor < guessNum)
                 {
-                    label2.Text = strValue + "~100";
+                    floor = guessNum;
+                    preAns = guessNum;
                 }
-                else if (int.Parse(val) < ans)
+                else if (ans < guessNum && guessNum < celling)
                 {
-                    label2.Text = "1~" + strValue;
+                    celling = guessNum;
+                    preAns = guessNum;
                 }
+                else if ((guessNum < ans && floor > guessNum) || (ans < guessNum && guessNum > celling))
+                {
+                    MessageBox.Show("請輸入" + floor + " ~ " + celling);
+                }
+                else
+                {
+                    MessageBox.Show("WIN");
+                }
+                label2.Text = floor + "  ~  " + celling;
             }
         }
 
-        private void frmGUS_Load(object sender, EventArgs e)
+        private void btnShowAns_Click(object sender, EventArgs e)
         {
-            chk(strValue);
+            MessageBox.Show("答案是: "+ ans.ToString());
         }
     }
 }
