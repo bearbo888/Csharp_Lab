@@ -36,6 +36,16 @@ namespace Guess
                     preAns = guessNum;
                 }
                 else if ((guessNum < ans && floor > guessNum) || (ans < guessNum && guessNum > celling))
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
+                if (int.Parse(val) > ans)
                 {
                     MessageBox.Show("請輸入" + floor + " ~ " + celling);
                 }
