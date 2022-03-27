@@ -1,5 +1,5 @@
 ﻿
-namespace GUESS
+namespace Guess
 {
     partial class frmGUS
     {

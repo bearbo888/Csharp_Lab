@@ -11,7 +11,9 @@ using XOgame;
 using System;
 using System.Windows.Forms;
 using MyClac;
-using GUESS;
+using Guess;
+using Notepad;
+using Painter;
 
 namespace HomePage
 {
@@ -157,6 +159,37 @@ namespace HomePage
         {
             splitContainer2.Panel2.Controls.Clear();
             frmGUS frm = new frmGUS();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.AutoScroll = true;
+            //frm.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnScreenSaver_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            frmSSR frm = new frmSSR();
+            frm.Show();
+        }
+
+        private void btnNotePad_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            frmNTP frm = new frmNTP();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.AutoScroll = true;
+            //frm.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnPainter_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            frmPAT frm = new frmPAT();
             frm.TopLevel = false;
             frm.Visible = true;
             frm.AutoScroll = true;

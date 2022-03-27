@@ -63,9 +63,9 @@ namespace Screen_Saver.Properties {
         /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Bitmap _163723523957142_P14482525 {
+        internal static System.Drawing.Bitmap iu {
             get {
-                object obj = ResourceManager.GetObject("163723523957142_P14482525", resourceCulture);
+                object obj = ResourceManager.GetObject("iu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

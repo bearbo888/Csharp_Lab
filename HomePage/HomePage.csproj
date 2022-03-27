@@ -88,9 +88,9 @@
       <Project>{7DD1405F-A46C-4092-9E15-DA54809ACA69}</Project>
       <Name>Forms_Lab</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GUESS\GUESS.csproj">
+    <ProjectReference Include="..\GUESS\Guess.csproj">
       <Project>{687736CF-7548-4E9E-A485-555325D7A0C2}</Project>
-      <Name>GUESS</Name>
+      <Name>Guess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Loan_Lab\Loan.csproj">
       <Project>{8B30C275-8F03-45C6-9E4D-D0C999F0764F}</Project>
@@ -103,6 +103,14 @@
     <ProjectReference Include="..\MyClac\MyClac.csproj">
       <Project>{49338d86-dad3-4daa-900f-6014ceb1789f}</Project>
       <Name>MyClac</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Notepad\Notepad.csproj">
+      <Project>{BE59EB91-19CF-4BD4-AA2A-5EB4FEF70251}</Project>
+      <Name>Notepad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Painter\Painter.csproj">
+      <Project>{055ED361-6536-4246-A9DC-7BF2A9E343B8}</Project>
+      <Name>Painter</Name>
     </ProjectReference>
     <ProjectReference Include="..\POS_Lab\POS.csproj">
       <Project>{1C6E5319-10F6-4A9E-879C-63A5C879837F}</Project>

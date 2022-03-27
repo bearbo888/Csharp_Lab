@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace GUESS
+namespace Guess
 {
     public partial class frmGUS : Form
     {

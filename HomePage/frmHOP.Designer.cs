@@ -33,8 +33,10 @@ namespace HomePage
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.btnViewer = new System.Windows.Forms.Button();
+            this.btnPainter = new System.Windows.Forms.Button();
+            this.btnNotePad = new System.Windows.Forms.Button();
+            this.btnScreenSaver = new System.Windows.Forms.Button();
             this.btnGuess = new System.Windows.Forms.Button();
             this.btnXO = new System.Windows.Forms.Button();
             this.btnDO = new System.Windows.Forms.Button();
@@ -95,8 +97,10 @@ namespace HomePage
             // 
             this.splitContainer2.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel1.BackgroundImage")));
             this.splitContainer2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer2.Panel1.Controls.Add(this.button13);
-            this.splitContainer2.Panel1.Controls.Add(this.button12);
+            this.splitContainer2.Panel1.Controls.Add(this.btnViewer);
+            this.splitContainer2.Panel1.Controls.Add(this.btnPainter);
+            this.splitContainer2.Panel1.Controls.Add(this.btnNotePad);
+            this.splitContainer2.Panel1.Controls.Add(this.btnScreenSaver);
             this.splitContainer2.Panel1.Controls.Add(this.btnGuess);
             this.splitContainer2.Panel1.Controls.Add(this.btnXO);
             this.splitContainer2.Panel1.Controls.Add(this.btnDO);
@@ -118,34 +122,57 @@ namespace HomePage
             this.splitContainer2.SplitterDistance = 251;
             this.splitContainer2.TabIndex = 0;
             // 
-            // button13
+            // btnViewer
             // 
-            this.button13.AutoSize = true;
-            this.button13.Location = new System.Drawing.Point(13, 360);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(225, 23);
-            this.button13.TabIndex = 11;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btnViewer.AutoSize = true;
+            this.btnViewer.Location = new System.Drawing.Point(14, 389);
+            this.btnViewer.Name = "btnViewer";
+            this.btnViewer.Size = new System.Drawing.Size(225, 23);
+            this.btnViewer.TabIndex = 13;
+            this.btnViewer.Text = "Picture Viewer";
+            this.btnViewer.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btnPainter
             // 
-            this.button12.AutoSize = true;
-            this.button12.Location = new System.Drawing.Point(12, 331);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(225, 23);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btnPainter.AutoSize = true;
+            this.btnPainter.Location = new System.Drawing.Point(13, 360);
+            this.btnPainter.Name = "btnPainter";
+            this.btnPainter.Size = new System.Drawing.Size(225, 23);
+            this.btnPainter.TabIndex = 12;
+            this.btnPainter.Text = "小畫家";
+            this.btnPainter.UseVisualStyleBackColor = true;
+            this.btnPainter.Click += new System.EventHandler(this.btnPainter_Click);
+            // 
+            // btnNotePad
+            // 
+            this.btnNotePad.AutoSize = true;
+            this.btnNotePad.Location = new System.Drawing.Point(14, 331);
+            this.btnNotePad.Name = "btnNotePad";
+            this.btnNotePad.Size = new System.Drawing.Size(225, 23);
+            this.btnNotePad.TabIndex = 11;
+            this.btnNotePad.Text = "NotePad";
+            this.btnNotePad.UseVisualStyleBackColor = true;
+            this.btnNotePad.Click += new System.EventHandler(this.btnNotePad_Click);
+            // 
+            // btnScreenSaver
+            // 
+            this.btnScreenSaver.AutoSize = true;
+            this.btnScreenSaver.Location = new System.Drawing.Point(13, 302);
+            this.btnScreenSaver.Name = "btnScreenSaver";
+            this.btnScreenSaver.Size = new System.Drawing.Size(225, 23);
+            this.btnScreenSaver.TabIndex = 10;
+            this.btnScreenSaver.Text = "Screen Saver";
+            this.btnScreenSaver.UseVisualStyleBackColor = true;
+            this.btnScreenSaver.Click += new System.EventHandler(this.btnScreenSaver_Click);
             // 
             // btnGuess
             // 
             this.btnGuess.AutoSize = true;
-            this.btnGuess.Location = new System.Drawing.Point(13, 302);
+            this.btnGuess.Location = new System.Drawing.Point(13, 418);
             this.btnGuess.Name = "btnGuess";
             this.btnGuess.Size = new System.Drawing.Size(225, 23);
             this.btnGuess.TabIndex = 9;
-            this.btnGuess.Text = "GUESS";
+            this.btnGuess.Text = "Guess";
             this.btnGuess.UseVisualStyleBackColor = true;
             this.btnGuess.Click += new System.EventHandler(this.btnGuess_Click);
             // 
@@ -286,8 +313,8 @@ namespace HomePage
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnNotePad;
+        private System.Windows.Forms.Button btnScreenSaver;
         private System.Windows.Forms.Button btnGuess;
         private System.Windows.Forms.Button btnXO;
         private System.Windows.Forms.Button btnDO;
@@ -300,6 +327,8 @@ namespace HomePage
         private System.Windows.Forms.Button btnLoan;
         private System.Windows.Forms.Button btnHello;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnViewer;
+        private System.Windows.Forms.Button btnPainter;
     }
 }
 

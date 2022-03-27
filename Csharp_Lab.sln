@@ -31,7 +31,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screen Saver", "Screen Save
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notepad", "Notepad\Notepad.csproj", "{BE59EB91-19CF-4BD4-AA2A-5EB4FEF70251}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUESS", "GUESS\GUESS.csproj", "{687736CF-7548-4E9E-A485-555325D7A0C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guess", "GUESS\Guess.csproj", "{687736CF-7548-4E9E-A485-555325D7A0C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Painter", "Painter\Painter.csproj", "{055ED361-6536-4246-A9DC-7BF2A9E343B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PictureViewer", "PictureViewer\PictureViewer.csproj", "{B4AAB942-E21B-4BB8-82A9-BC936DF02BC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alarm", "Alarm\Alarm.csproj", "{5DDF818F-3172-453A-A7D5-784C8C7F0DF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +105,18 @@ Global
 		{687736CF-7548-4E9E-A485-555325D7A0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{687736CF-7548-4E9E-A485-555325D7A0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{687736CF-7548-4E9E-A485-555325D7A0C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055ED361-6536-4246-A9DC-7BF2A9E343B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055ED361-6536-4246-A9DC-7BF2A9E343B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055ED361-6536-4246-A9DC-7BF2A9E343B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055ED361-6536-4246-A9DC-7BF2A9E343B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4AAB942-E21B-4BB8-82A9-BC936DF02BC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4AAB942-E21B-4BB8-82A9-BC936DF02BC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4AAB942-E21B-4BB8-82A9-BC936DF02BC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4AAB942-E21B-4BB8-82A9-BC936DF02BC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DDF818F-3172-453A-A7D5-784C8C7F0DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DDF818F-3172-453A-A7D5-784C8C7F0DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DDF818F-3172-453A-A7D5-784C8C7F0DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DDF818F-3172-453A-A7D5-784C8C7F0DF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
