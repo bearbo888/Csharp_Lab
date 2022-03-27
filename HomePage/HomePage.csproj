@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Alarm\Alarm.csproj">
+      <Project>{5DDF818F-3172-453A-A7D5-784C8C7F0DF4}</Project>
+      <Name>Alarm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\doForWhile\DoForWhile.csproj">
       <Project>{b53f2d5b-ceb2-4df8-83db-2eaa1560b647}</Project>
       <Name>DoForWhile</Name>

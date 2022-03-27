@@ -19,7 +19,25 @@ namespace PictureViewer
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            //tableLayoutPanel.
+            int w = this.Width;
+            int h = this.Height;
+
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            //frmShow s = new frmShow();
+            //Bitmap img = s.BackgroundImage();
+
+            //s.StartPosition = FormStartPosition.CenterScreen;
+            //s.Size = img.Size;
+
+            //PictureBox pb = new PictureBox();
+            //pb.Dock = DockStyle.Fill;
+            //pb.Image = img;
+
+            //s.Controls.Add(pb);
+            //s.ShowDialog();
         }
     }
 }
