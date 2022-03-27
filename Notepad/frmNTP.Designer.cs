@@ -136,7 +136,6 @@ namespace Notepad
             // 
             this.toolStripDropDownButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton8.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripDropDownButton8.Image = global::Notepad.Properties.Resources.redo;
             this.toolStripDropDownButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton8.Name = "toolStripDropDownButton8";
             this.toolStripDropDownButton8.Size = new System.Drawing.Size(23, 22);
@@ -147,7 +146,6 @@ namespace Notepad
             // 
             this.toolStripDropDownButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton7.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripDropDownButton7.Image = global::Notepad.Properties.Resources.undo;
             this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
             this.toolStripDropDownButton7.Size = new System.Drawing.Size(23, 22);
