@@ -33,8 +33,6 @@ namespace Screen_Saver
         }
         private void frmSSR_Load(object sender, EventArgs e)
         {
-            /*ResourceManager res = new ResourceManager("方案名稱.資料檔名", typeof(表單物件).Assembly);
-            pictureBox.Image = (Bitmap)res.GetObject("iu.gif");*/
             moveTimer.Interval = 1;
             moveTimer.Tick += new EventHandler(moveTimer_Tick);
             moveTimer.Start();
