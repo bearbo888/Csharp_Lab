@@ -18,7 +18,7 @@ namespace Guess
         {
             frmPUT input = new frmPUT();
             input.Owner = this;      
-            input.Show(this);
+            input.Show();
         }
         public void chkans(string guessnumber)
         {

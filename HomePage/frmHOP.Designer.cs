@@ -31,9 +31,10 @@ namespace HomePage
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHOP));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.btnViewer = new System.Windows.Forms.Button();
+            this.btnAlarm = new System.Windows.Forms.Button();
             this.btnPainter = new System.Windows.Forms.Button();
             this.btnNotePad = new System.Windows.Forms.Button();
             this.btnScreenSaver = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@ namespace HomePage
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
@@ -66,22 +68,36 @@ namespace HomePage
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel1.BackgroundImage")));
             this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(998, 627);
-            this.splitContainer1.SplitterDistance = 128;
+            this.splitContainer1.Size = new System.Drawing.Size(1484, 861);
+            this.splitContainer1.SplitterDistance = 210;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1484, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("標楷體", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(57, 40);
+            this.label1.Location = new System.Drawing.Point(1263, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 35);
             this.label1.TabIndex = 0;
@@ -97,7 +113,7 @@ namespace HomePage
             // 
             this.splitContainer2.Panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel1.BackgroundImage")));
             this.splitContainer2.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer2.Panel1.Controls.Add(this.btnViewer);
+            this.splitContainer2.Panel1.Controls.Add(this.btnAlarm);
             this.splitContainer2.Panel1.Controls.Add(this.btnPainter);
             this.splitContainer2.Panel1.Controls.Add(this.btnNotePad);
             this.splitContainer2.Panel1.Controls.Add(this.btnScreenSaver);
@@ -118,26 +134,27 @@ namespace HomePage
             // 
             this.splitContainer2.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer2.Panel2.BackgroundImage")));
             this.splitContainer2.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer2.Size = new System.Drawing.Size(998, 495);
-            this.splitContainer2.SplitterDistance = 251;
+            this.splitContainer2.Size = new System.Drawing.Size(1484, 647);
+            this.splitContainer2.SplitterDistance = 373;
             this.splitContainer2.TabIndex = 0;
             // 
-            // btnViewer
+            // btnAlarm
             // 
-            this.btnViewer.AutoSize = true;
-            this.btnViewer.Location = new System.Drawing.Point(14, 389);
-            this.btnViewer.Name = "btnViewer";
-            this.btnViewer.Size = new System.Drawing.Size(225, 23);
-            this.btnViewer.TabIndex = 13;
-            this.btnViewer.Text = "Picture Viewer";
-            this.btnViewer.UseVisualStyleBackColor = true;
+            this.btnAlarm.AutoSize = true;
+            this.btnAlarm.Location = new System.Drawing.Point(14, 389);
+            this.btnAlarm.Name = "btnAlarm";
+            this.btnAlarm.Size = new System.Drawing.Size(345, 23);
+            this.btnAlarm.TabIndex = 13;
+            this.btnAlarm.Text = "Alarm";
+            this.btnAlarm.UseVisualStyleBackColor = true;
+            this.btnAlarm.Click += new System.EventHandler(this.btnAlarm_Click);
             // 
             // btnPainter
             // 
             this.btnPainter.AutoSize = true;
             this.btnPainter.Location = new System.Drawing.Point(13, 360);
             this.btnPainter.Name = "btnPainter";
-            this.btnPainter.Size = new System.Drawing.Size(225, 23);
+            this.btnPainter.Size = new System.Drawing.Size(345, 23);
             this.btnPainter.TabIndex = 12;
             this.btnPainter.Text = "小畫家";
             this.btnPainter.UseVisualStyleBackColor = true;
@@ -148,7 +165,7 @@ namespace HomePage
             this.btnNotePad.AutoSize = true;
             this.btnNotePad.Location = new System.Drawing.Point(14, 331);
             this.btnNotePad.Name = "btnNotePad";
-            this.btnNotePad.Size = new System.Drawing.Size(225, 23);
+            this.btnNotePad.Size = new System.Drawing.Size(345, 23);
             this.btnNotePad.TabIndex = 11;
             this.btnNotePad.Text = "NotePad";
             this.btnNotePad.UseVisualStyleBackColor = true;
@@ -159,7 +176,7 @@ namespace HomePage
             this.btnScreenSaver.AutoSize = true;
             this.btnScreenSaver.Location = new System.Drawing.Point(13, 302);
             this.btnScreenSaver.Name = "btnScreenSaver";
-            this.btnScreenSaver.Size = new System.Drawing.Size(225, 23);
+            this.btnScreenSaver.Size = new System.Drawing.Size(345, 23);
             this.btnScreenSaver.TabIndex = 10;
             this.btnScreenSaver.Text = "Screen Saver";
             this.btnScreenSaver.UseVisualStyleBackColor = true;
@@ -170,7 +187,7 @@ namespace HomePage
             this.btnGuess.AutoSize = true;
             this.btnGuess.Location = new System.Drawing.Point(13, 418);
             this.btnGuess.Name = "btnGuess";
-            this.btnGuess.Size = new System.Drawing.Size(225, 23);
+            this.btnGuess.Size = new System.Drawing.Size(345, 23);
             this.btnGuess.TabIndex = 9;
             this.btnGuess.Text = "Guess";
             this.btnGuess.UseVisualStyleBackColor = true;
@@ -181,7 +198,7 @@ namespace HomePage
             this.btnXO.AutoSize = true;
             this.btnXO.Location = new System.Drawing.Point(13, 273);
             this.btnXO.Name = "btnXO";
-            this.btnXO.Size = new System.Drawing.Size(225, 23);
+            this.btnXO.Size = new System.Drawing.Size(345, 23);
             this.btnXO.TabIndex = 8;
             this.btnXO.Text = "0716_XOGame";
             this.btnXO.UseVisualStyleBackColor = true;
@@ -192,7 +209,7 @@ namespace HomePage
             this.btnDO.AutoSize = true;
             this.btnDO.Location = new System.Drawing.Point(13, 244);
             this.btnDO.Name = "btnDO";
-            this.btnDO.Size = new System.Drawing.Size(225, 23);
+            this.btnDO.Size = new System.Drawing.Size(345, 23);
             this.btnDO.TabIndex = 7;
             this.btnDO.Text = "0712_ForDoWhile";
             this.btnDO.UseVisualStyleBackColor = true;
@@ -203,7 +220,7 @@ namespace HomePage
             this.btnCalc.AutoSize = true;
             this.btnCalc.Location = new System.Drawing.Point(13, 215);
             this.btnCalc.Name = "btnCalc";
-            this.btnCalc.Size = new System.Drawing.Size(225, 23);
+            this.btnCalc.Size = new System.Drawing.Size(345, 23);
             this.btnCalc.TabIndex = 1;
             this.btnCalc.Text = "0711_MyClac";
             this.btnCalc.UseVisualStyleBackColor = true;
@@ -214,7 +231,7 @@ namespace HomePage
             this.btnMethod.AutoSize = true;
             this.btnMethod.Location = new System.Drawing.Point(13, 186);
             this.btnMethod.Name = "btnMethod";
-            this.btnMethod.Size = new System.Drawing.Size(225, 23);
+            this.btnMethod.Size = new System.Drawing.Size(345, 23);
             this.btnMethod.TabIndex = 6;
             this.btnMethod.Text = "0711_Method";
             this.btnMethod.UseVisualStyleBackColor = true;
@@ -225,7 +242,7 @@ namespace HomePage
             this.btnSGL.AutoSize = true;
             this.btnSGL.Location = new System.Drawing.Point(13, 157);
             this.btnSGL.Name = "btnSGL";
-            this.btnSGL.Size = new System.Drawing.Size(225, 23);
+            this.btnSGL.Size = new System.Drawing.Size(345, 23);
             this.btnSGL.TabIndex = 5;
             this.btnSGL.Text = "0710_StudentGrade_List";
             this.btnSGL.UseVisualStyleBackColor = true;
@@ -236,7 +253,7 @@ namespace HomePage
             this.btnSG.AutoSize = true;
             this.btnSG.Location = new System.Drawing.Point(13, 128);
             this.btnSG.Name = "btnSG";
-            this.btnSG.Size = new System.Drawing.Size(225, 23);
+            this.btnSG.Size = new System.Drawing.Size(345, 23);
             this.btnSG.TabIndex = 4;
             this.btnSG.Text = "0709_StudentGrade";
             this.btnSG.UseVisualStyleBackColor = true;
@@ -247,7 +264,7 @@ namespace HomePage
             this.btnSSF.AutoSize = true;
             this.btnSSF.Location = new System.Drawing.Point(12, 99);
             this.btnSSF.Name = "btnSSF";
-            this.btnSSF.Size = new System.Drawing.Size(225, 23);
+            this.btnSSF.Size = new System.Drawing.Size(345, 23);
             this.btnSSF.TabIndex = 3;
             this.btnSSF.Text = "0708_Student_StructForm";
             this.btnSSF.UseVisualStyleBackColor = true;
@@ -258,7 +275,7 @@ namespace HomePage
             this.btnPOS.AutoSize = true;
             this.btnPOS.Location = new System.Drawing.Point(13, 70);
             this.btnPOS.Name = "btnPOS";
-            this.btnPOS.Size = new System.Drawing.Size(225, 23);
+            this.btnPOS.Size = new System.Drawing.Size(345, 23);
             this.btnPOS.TabIndex = 2;
             this.btnPOS.Text = "0705_POS";
             this.btnPOS.UseVisualStyleBackColor = true;
@@ -269,7 +286,7 @@ namespace HomePage
             this.btnLoan.AutoSize = true;
             this.btnLoan.Location = new System.Drawing.Point(12, 41);
             this.btnLoan.Name = "btnLoan";
-            this.btnLoan.Size = new System.Drawing.Size(225, 23);
+            this.btnLoan.Size = new System.Drawing.Size(345, 23);
             this.btnLoan.TabIndex = 1;
             this.btnLoan.Text = "0704_Loan";
             this.btnLoan.UseVisualStyleBackColor = true;
@@ -279,8 +296,9 @@ namespace HomePage
             // 
             this.btnHello.AutoSize = true;
             this.btnHello.Location = new System.Drawing.Point(12, 12);
+            this.btnHello.Margin = new System.Windows.Forms.Padding(0);
             this.btnHello.Name = "btnHello";
-            this.btnHello.Size = new System.Drawing.Size(225, 23);
+            this.btnHello.Size = new System.Drawing.Size(345, 23);
             this.btnHello.TabIndex = 0;
             this.btnHello.Text = "0703_Hello";
             this.btnHello.UseVisualStyleBackColor = true;
@@ -291,7 +309,7 @@ namespace HomePage
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(998, 627);
+            this.ClientSize = new System.Drawing.Size(1484, 861);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmHOP";
             this.Text = "Form1";
@@ -301,6 +319,7 @@ namespace HomePage
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -327,8 +346,9 @@ namespace HomePage
         private System.Windows.Forms.Button btnLoan;
         private System.Windows.Forms.Button btnHello;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnViewer;
+        private System.Windows.Forms.Button btnAlarm;
         private System.Windows.Forms.Button btnPainter;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
