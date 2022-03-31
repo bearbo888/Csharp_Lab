@@ -14,6 +14,7 @@ using MyClac;
 using Guess;
 using Notepad;
 using Painter;
+using Alarm;
 
 namespace HomePage
 {
@@ -153,6 +154,10 @@ namespace HomePage
             btnXO.Width = splitContainer2.Panel1.Width - 20;
             btnSG.Width = splitContainer2.Panel1.Width - 20;
             btnGuess.Width = splitContainer2.Panel1.Width - 20;
+            btnPainter.Width = splitContainer2.Panel1.Width - 20;
+            btnScreenSaver.Width = splitContainer2.Panel1.Width - 20;
+            btnNotePad.Width = splitContainer2.Panel1.Width - 20;
+            btnAlarm.Width = splitContainer2.Panel1.Width - 20;
         }
 
         private void btnGuess_Click(object sender, EventArgs e)
@@ -190,6 +195,18 @@ namespace HomePage
         {
             splitContainer2.Panel2.Controls.Clear();
             frmPAT frm = new frmPAT();
+            frm.TopLevel = false;
+            frm.Visible = true;
+            frm.AutoScroll = true;
+            //frm.Dock = DockStyle.Fill;
+            splitContainer2.Panel2.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void btnAlarm_Click(object sender, EventArgs e)
+        {
+            splitContainer2.Panel2.Controls.Clear();
+            frmARM frm = new frmARM();
             frm.TopLevel = false;
             frm.Visible = true;
             frm.AutoScroll = true;

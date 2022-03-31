@@ -31,15 +31,26 @@ namespace Notepad
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNTP));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.開啟ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.另存新檔ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.結束ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.復原ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.取消復原ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.剪下ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.複製ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.貼上ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.關於ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripDropDownButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripButton();
@@ -47,14 +58,17 @@ namespace Notepad
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.開啟ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.儲存ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.另存新檔ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.列印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.預覽列印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.結束ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.顏色ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.字型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.大寫ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.小寫ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.紅ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.綠ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.藍ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.黑ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -73,15 +87,123 @@ namespace Notepad
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBox1,
+            this.開啟ToolStripMenuItem,
+            this.另存新檔ToolStripMenuItem,
+            this.結束ToolStripMenuItem});
+            this.toolStripButton1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(67, 31);
+            this.toolStripButton1.Text = "檔案";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.toolStripTextBox1.Size = new System.Drawing.Size(242, 32);
+            this.toolStripTextBox1.Text = "新增";
+            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
+            // 
+            // 開啟ToolStripMenuItem
+            // 
+            this.開啟ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("開啟ToolStripMenuItem.Image")));
+            this.開啟ToolStripMenuItem.Name = "開啟ToolStripMenuItem";
+            this.開啟ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.開啟ToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.開啟ToolStripMenuItem.Text = "開啟";
+            this.開啟ToolStripMenuItem.Click += new System.EventHandler(this.開啟ToolStripMenuItem_Click);
+            // 
+            // 另存新檔ToolStripMenuItem
+            // 
+            this.另存新檔ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("另存新檔ToolStripMenuItem.Image")));
+            this.另存新檔ToolStripMenuItem.Name = "另存新檔ToolStripMenuItem";
+            this.另存新檔ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.另存新檔ToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.另存新檔ToolStripMenuItem.Text = "另存新檔";
+            this.另存新檔ToolStripMenuItem.Click += new System.EventHandler(this.另存新檔ToolStripMenuItem_Click);
+            // 
+            // 結束ToolStripMenuItem
+            // 
+            this.結束ToolStripMenuItem.Name = "結束ToolStripMenuItem";
+            this.結束ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.結束ToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.結束ToolStripMenuItem.Text = "結束";
+            this.結束ToolStripMenuItem.Click += new System.EventHandler(this.結束ToolStripMenuItem_Click);
+            // 
             // toolStripButton5
             // 
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.復原ToolStripMenuItem,
+            this.取消復原ToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.剪下ToolStripMenuItem,
+            this.複製ToolStripMenuItem,
+            this.貼上ToolStripMenuItem});
             this.toolStripButton5.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(67, 31);
             this.toolStripButton5.Text = "編輯";
+            // 
+            // 復原ToolStripMenuItem
+            // 
+            this.復原ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("復原ToolStripMenuItem.Image")));
+            this.復原ToolStripMenuItem.Name = "復原ToolStripMenuItem";
+            this.復原ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.復原ToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.復原ToolStripMenuItem.Text = "復原";
+            this.復原ToolStripMenuItem.Click += new System.EventHandler(this.復原ToolStripMenuItem_Click);
+            // 
+            // 取消復原ToolStripMenuItem
+            // 
+            this.取消復原ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("取消復原ToolStripMenuItem.Image")));
+            this.取消復原ToolStripMenuItem.Name = "取消復原ToolStripMenuItem";
+            this.取消復原ToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.取消復原ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.取消復原ToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.取消復原ToolStripMenuItem.Text = "取消復原";
+            this.取消復原ToolStripMenuItem.Click += new System.EventHandler(this.取消復原ToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(239, 6);
+            // 
+            // 剪下ToolStripMenuItem
+            // 
+            this.剪下ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("剪下ToolStripMenuItem.Image")));
+            this.剪下ToolStripMenuItem.Name = "剪下ToolStripMenuItem";
+            this.剪下ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.剪下ToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.剪下ToolStripMenuItem.Text = "剪下";
+            this.剪下ToolStripMenuItem.Click += new System.EventHandler(this.剪下ToolStripMenuItem_Click);
+            // 
+            // 複製ToolStripMenuItem
+            // 
+            this.複製ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("複製ToolStripMenuItem.Image")));
+            this.複製ToolStripMenuItem.Name = "複製ToolStripMenuItem";
+            this.複製ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.複製ToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.複製ToolStripMenuItem.Text = "複製";
+            this.複製ToolStripMenuItem.Click += new System.EventHandler(this.複製ToolStripMenuItem_Click);
+            // 
+            // 貼上ToolStripMenuItem
+            // 
+            this.貼上ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("貼上ToolStripMenuItem.Image")));
+            this.貼上ToolStripMenuItem.Name = "貼上ToolStripMenuItem";
+            this.貼上ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.貼上ToolStripMenuItem.Size = new System.Drawing.Size(242, 32);
+            this.貼上ToolStripMenuItem.Text = "貼上";
+            this.貼上ToolStripMenuItem.Click += new System.EventHandler(this.貼上ToolStripMenuItem_Click);
             // 
             // toolStripButton4
             // 
@@ -96,6 +218,12 @@ namespace Notepad
             // toolStripButton3
             // 
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.顏色ToolStripMenuItem,
+            this.字型ToolStripMenuItem,
+            this.大寫ToolStripMenuItem,
+            this.小寫ToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.toolStripButton3.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -106,6 +234,8 @@ namespace Notepad
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.關於ToolStripMenuItem});
             this.toolStripButton2.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -113,13 +243,20 @@ namespace Notepad
             this.toolStripButton2.Size = new System.Drawing.Size(67, 31);
             this.toolStripButton2.Text = "說明";
             // 
+            // 關於ToolStripMenuItem
+            // 
+            this.關於ToolStripMenuItem.Name = "關於ToolStripMenuItem";
+            this.關於ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.關於ToolStripMenuItem.Size = new System.Drawing.Size(203, 32);
+            this.關於ToolStripMenuItem.Text = "關於";
+            this.關於ToolStripMenuItem.Click += new System.EventHandler(this.關於ToolStripMenuItem_Click);
+            // 
             // toolStrip2
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton8,
             this.toolStripDropDownButton7,
             this.toolStripDropDownButton6,
-            this.toolStripDropDownButton5,
             this.toolStripSeparator1,
             this.toolStripDropDownButton4,
             this.toolStripDropDownButton3,
@@ -136,21 +273,23 @@ namespace Notepad
             // 
             this.toolStripDropDownButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton8.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.toolStripDropDownButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton8.Image")));
             this.toolStripDropDownButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton8.Name = "toolStripDropDownButton8";
             this.toolStripDropDownButton8.Size = new System.Drawing.Size(23, 22);
             this.toolStripDropDownButton8.Text = "Undo";
-            this.toolStripDropDownButton8.Click += new System.EventHandler(this.toolStripDropDownButton8_Click);
+            this.toolStripDropDownButton8.Click += new System.EventHandler(this.復原ToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton7
             // 
             this.toolStripDropDownButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripDropDownButton7.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.toolStripDropDownButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton7.Image")));
             this.toolStripDropDownButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton7.Name = "toolStripDropDownButton7";
             this.toolStripDropDownButton7.Size = new System.Drawing.Size(23, 22);
             this.toolStripDropDownButton7.Text = "Redo";
-            this.toolStripDropDownButton7.Click += new System.EventHandler(this.toolStripDropDownButton7_Click);
+            this.toolStripDropDownButton7.Click += new System.EventHandler(this.取消復原ToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton6
             // 
@@ -161,16 +300,7 @@ namespace Notepad
             this.toolStripDropDownButton6.Name = "toolStripDropDownButton6";
             this.toolStripDropDownButton6.Size = new System.Drawing.Size(23, 22);
             this.toolStripDropDownButton6.Text = "編輯";
-            // 
-            // toolStripDropDownButton5
-            // 
-            this.toolStripDropDownButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripDropDownButton5.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripDropDownButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton5.Image")));
-            this.toolStripDropDownButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton5.Name = "toolStripDropDownButton5";
-            this.toolStripDropDownButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripDropDownButton5.Text = "編輯";
+            this.toolStripDropDownButton6.Click += new System.EventHandler(this.另存新檔ToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -186,6 +316,7 @@ namespace Notepad
             this.toolStripDropDownButton4.Name = "toolStripDropDownButton4";
             this.toolStripDropDownButton4.Size = new System.Drawing.Size(23, 22);
             this.toolStripDropDownButton4.Text = "編輯";
+            this.toolStripDropDownButton4.Click += new System.EventHandler(this.剪下ToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton3
             // 
@@ -196,6 +327,7 @@ namespace Notepad
             this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
             this.toolStripDropDownButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripDropDownButton3.Text = "編輯";
+            this.toolStripDropDownButton3.Click += new System.EventHandler(this.複製ToolStripMenuItem_Click);
             // 
             // toolStripDropDownButton2
             // 
@@ -206,6 +338,7 @@ namespace Notepad
             this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
             this.toolStripDropDownButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripDropDownButton2.Text = "編輯";
+            this.toolStripDropDownButton2.Click += new System.EventHandler(this.貼上ToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -221,6 +354,7 @@ namespace Notepad
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(23, 22);
             this.toolStripDropDownButton1.Text = "編輯";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.關於ToolStripMenuItem_Click);
             // 
             // richTextBox1
             // 
@@ -230,72 +364,74 @@ namespace Notepad
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
-            // toolStripButton1
+            // 顏色ToolStripMenuItem
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripTextBox1,
-            this.開啟ToolStripMenuItem,
-            this.儲存ToolStripMenuItem,
-            this.另存新檔ToolStripMenuItem,
-            this.列印ToolStripMenuItem,
-            this.預覽列印ToolStripMenuItem,
-            this.結束ToolStripMenuItem});
-            this.toolStripButton1.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(67, 31);
-            this.toolStripButton1.Text = "檔案";
+            this.顏色ToolStripMenuItem.Name = "顏色ToolStripMenuItem";
+            this.顏色ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.顏色ToolStripMenuItem.Text = "顏色";
+            this.顏色ToolStripMenuItem.Click += new System.EventHandler(this.顏色ToolStripMenuItem_Click);
             // 
-            // toolStripTextBox1
+            // 字型ToolStripMenuItem
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 35);
-            this.toolStripTextBox1.Text = "新增";
-            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
+            this.字型ToolStripMenuItem.Name = "字型ToolStripMenuItem";
+            this.字型ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.字型ToolStripMenuItem.Text = "字型";
+            this.字型ToolStripMenuItem.Click += new System.EventHandler(this.字型ToolStripMenuItem_Click);
             // 
-            // 開啟ToolStripMenuItem
+            // 大寫ToolStripMenuItem
             // 
-            this.開啟ToolStripMenuItem.Name = "開啟ToolStripMenuItem";
-            this.開啟ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
-            this.開啟ToolStripMenuItem.Text = "開啟";
-            this.開啟ToolStripMenuItem.Click += new System.EventHandler(this.開啟ToolStripMenuItem_Click);
+            this.大寫ToolStripMenuItem.Name = "大寫ToolStripMenuItem";
+            this.大寫ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.大寫ToolStripMenuItem.Text = "大寫";
+            this.大寫ToolStripMenuItem.Click += new System.EventHandler(this.大寫ToolStripMenuItem_Click);
             // 
-            // 儲存ToolStripMenuItem
+            // 小寫ToolStripMenuItem
             // 
-            this.儲存ToolStripMenuItem.Name = "儲存ToolStripMenuItem";
-            this.儲存ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
-            this.儲存ToolStripMenuItem.Text = "儲存";
+            this.小寫ToolStripMenuItem.Name = "小寫ToolStripMenuItem";
+            this.小寫ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.小寫ToolStripMenuItem.Text = "小寫";
+            this.小寫ToolStripMenuItem.Click += new System.EventHandler(this.小寫ToolStripMenuItem_Click);
             // 
-            // 另存新檔ToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.另存新檔ToolStripMenuItem.Name = "另存新檔ToolStripMenuItem";
-            this.另存新檔ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
-            this.另存新檔ToolStripMenuItem.Text = "另存新檔";
-            this.另存新檔ToolStripMenuItem.Click += new System.EventHandler(this.另存新檔ToolStripMenuItem_Click);
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.紅ToolStripMenuItem,
+            this.綠ToolStripMenuItem,
+            this.藍ToolStripMenuItem,
+            this.黑ToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 32);
+            this.toolStripMenuItem1.Text = "快選顏色";
             // 
-            // 列印ToolStripMenuItem
+            // 紅ToolStripMenuItem
             // 
-            this.列印ToolStripMenuItem.Name = "列印ToolStripMenuItem";
-            this.列印ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
-            this.列印ToolStripMenuItem.Text = "列印";
+            this.紅ToolStripMenuItem.Name = "紅ToolStripMenuItem";
+            this.紅ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.紅ToolStripMenuItem.Text = "紅";
+            this.紅ToolStripMenuItem.Click += new System.EventHandler(this.紅ToolStripMenuItem_Click);
             // 
-            // 預覽列印ToolStripMenuItem
+            // 綠ToolStripMenuItem
             // 
-            this.預覽列印ToolStripMenuItem.Name = "預覽列印ToolStripMenuItem";
-            this.預覽列印ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
-            this.預覽列印ToolStripMenuItem.Text = "預覽列印";
+            this.綠ToolStripMenuItem.Name = "綠ToolStripMenuItem";
+            this.綠ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.綠ToolStripMenuItem.Text = "綠";
+            this.綠ToolStripMenuItem.Click += new System.EventHandler(this.綠ToolStripMenuItem_Click);
             // 
-            // 結束ToolStripMenuItem
+            // 藍ToolStripMenuItem
             // 
-            this.結束ToolStripMenuItem.Name = "結束ToolStripMenuItem";
-            this.結束ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
-            this.結束ToolStripMenuItem.Text = "結束";
-            this.結束ToolStripMenuItem.Click += new System.EventHandler(this.結束ToolStripMenuItem_Click);
+            this.藍ToolStripMenuItem.Name = "藍ToolStripMenuItem";
+            this.藍ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.藍ToolStripMenuItem.Text = "藍";
+            this.藍ToolStripMenuItem.Click += new System.EventHandler(this.藍ToolStripMenuItem_Click);
             // 
-            // Form1
+            // 黑ToolStripMenuItem
+            // 
+            this.黑ToolStripMenuItem.Name = "黑ToolStripMenuItem";
+            this.黑ToolStripMenuItem.Size = new System.Drawing.Size(180, 32);
+            this.黑ToolStripMenuItem.Text = "黑";
+            this.黑ToolStripMenuItem.Click += new System.EventHandler(this.黑ToolStripMenuItem_Click);
+            // 
+            // frmNTP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -303,7 +439,7 @@ namespace Notepad
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
-            this.Name = "Form1";
+            this.Name = "frmNTP";
             this.Text = "Notepad";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.toolStrip1.ResumeLayout(false);
@@ -326,7 +462,6 @@ namespace Notepad
         private System.Windows.Forms.ToolStripButton toolStripDropDownButton8;
         private System.Windows.Forms.ToolStripButton toolStripDropDownButton7;
         private System.Windows.Forms.ToolStripButton toolStripDropDownButton6;
-        private System.Windows.Forms.ToolStripButton toolStripDropDownButton5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripDropDownButton4;
         private System.Windows.Forms.ToolStripButton toolStripDropDownButton3;
@@ -335,13 +470,28 @@ namespace Notepad
         private System.Windows.Forms.ToolStripButton toolStripDropDownButton1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripButton1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripMenuItem 開啟ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 儲存ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 另存新檔ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 列印ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 預覽列印ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 結束ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem 復原ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 取消復原ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem 剪下ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 複製ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 貼上ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 關於ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 顏色ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 字型ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 大寫ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 小寫ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 紅ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 綠ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 藍ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 黑ToolStripMenuItem;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 

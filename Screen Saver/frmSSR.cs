@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Resources;
 
 namespace Screen_Saver
 {
     public partial class frmSSR : Form
     {
-        int x = 1; int y = 1;
+        int x = 2; int y = 2;
         public frmSSR()
         {
             InitializeComponent();    
@@ -38,7 +39,7 @@ namespace Screen_Saver
         }
         private void moveTimer_Tick(object sender, System.EventArgs e)
         {
-            int distance = 1;
+            int distance = 2;
             if (pictureBox.Location.X + pictureBox.Width > this.Width)
             {
                 x = -distance;

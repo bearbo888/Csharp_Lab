@@ -177,11 +177,7 @@ namespace Method
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    if (i % 9 == 0 || j % 9 == 0)
-                    {
-                        lbResult.Text += "0   ";
-
-                    }
+                    if (i % 9 == 0 || j % 9 == 0) { lbResult.Text += "0   "; }
                     else
                     {
                         lbResult.Text += "1   ";

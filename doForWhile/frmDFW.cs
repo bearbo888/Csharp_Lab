@@ -120,5 +120,10 @@ namespace doForWhile
                 lbResult.Text = f + " 到 " + t + " 間隔：" + s + "\n加總為 " + total;
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            lbResult.Text = Convert.ToString(100,2);
+        }
     }
 }

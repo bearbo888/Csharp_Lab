@@ -68,40 +68,96 @@ namespace Notepad
             }
         }
 
-        private void toolStripDropDownButton8_Click(object sender, EventArgs e)
+        private void 另存新檔ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFile();
+        }
+
+        private void SaveFile()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text(*.txt)|*.txt";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string path = saveFileDialog.FileName;
+                FileStream fs = new FileStream(path, FileMode.Create);
+                StreamWriter sw = new StreamWriter(fs);
+                sw.Write(richTextBox1.Text);
+                sw.Close();
+            }
+        }
+
+        private void 復原ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Undo();
         }
 
-        private void toolStripDropDownButton7_Click(object sender, EventArgs e)
+        private void 取消復原ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             richTextBox1.Redo();
         }
 
-        private void 另存新檔ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 剪下ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SaveFileDialog saveFileDialog = new SaveFileDialog();
-                saveFileDialog.Filter = "txt files(*.txt)|*.txt|All files(*.*)|*.*";
-                saveFileDialog.DefaultExt = "txt";
-                saveFileDialog.AddExtension = true;
+            richTextBox1.Cut();
+        }
 
-                if (saveFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    string path = saveFileDialog.FileName;
-                    FileStream fs = new FileStream(path,FileMode.Create);
-                    StreamWriter sw = new StreamWriter(fs);
-                    sw.Write(richTextBox1.Text);
-                    sw.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        private void 複製ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Copy();
+        }
 
-            
+        private void 貼上ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Paste();
+        }
+
+        private void 關於ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("此版本為練習用途","關於");
+        }
+
+        private void 顏色ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            richTextBox1.ForeColor = colorDialog1.Color;
+        }
+
+        private void 字型ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fontDialog1.ShowDialog();
+            richTextBox1.Font = fontDialog1.Font;
+        }
+
+        private void 大寫ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = richTextBox1.Text.ToUpper();
+        }
+
+        private void 小寫ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = richTextBox1.Text.ToLower();
+        }
+
+        private void 紅ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Red;
+        }
+
+        private void 綠ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Green;
+        }
+
+        private void 藍ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Blue;
+        }
+
+        private void 黑ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Black;
         }
     }
 }
