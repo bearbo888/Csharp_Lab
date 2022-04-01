@@ -16,28 +16,38 @@ namespace PictureViewer
         {
             InitializeComponent();
         }
-
-        private void Form1_Resize(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            int w = this.Width;
-            int h = this.Height;
+            var path = "..\\..\\picc\\";
+            var list = new List<string>();
+            var name = ".jpg";
 
+            for (int i = 1; i < 17; i++)
+            {
+                list.Add(i + name);
+            }
+
+            ImageList imglist = new ImageList();
+            imglist.ImageSize = new Size(150, 150);
+            imglist.ColorDepth = ColorDepth.Depth32Bit;
+            foreach (var fileName in list)
+            {
+                imglist.Images.Add(Image.FromFile(path + fileName));
+            }
+            listView1.LargeImageList = imglist;
+
+            for (int i = 0; i < imglist.Images.Count; i++)
+            {
+                var lvi = new ListViewItem();
+                lvi.ImageIndex = i;
+                listView1.Items.Add(lvi);
+            }
         }
 
-        private void pictureBox19_Click(object sender, EventArgs e)
+        private void listView1_Click(object sender, EventArgs e)
         {
-            //frmShow s = new frmShow();
-            //Bitmap img = s.BackgroundImage();
-
-            //s.StartPosition = FormStartPosition.CenterScreen;
-            //s.Size = img.Size;
-
-            //PictureBox pb = new PictureBox();
-            //pb.Dock = DockStyle.Fill;
-            //pb.Image = img;
-
-            //s.Controls.Add(pb);
-            //s.ShowDialog();
+            show s = new show();
+            s.Show();
         }
     }
 }
