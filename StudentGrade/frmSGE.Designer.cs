@@ -72,9 +72,9 @@ namespace StudentGrade
             this.label2.Font = new System.Drawing.Font("新細明體", 16F);
             this.label2.Location = new System.Drawing.Point(11, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 22);
+            this.label2.Size = new System.Drawing.Size(76, 22);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Math :";
+            this.label2.Text = "數學：";
             // 
             // tbEng
             // 
@@ -90,9 +90,9 @@ namespace StudentGrade
             this.label3.Font = new System.Drawing.Font("新細明體", 16F);
             this.label3.Location = new System.Drawing.Point(11, 122);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 22);
+            this.label3.Size = new System.Drawing.Size(76, 22);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Engilsh :";
+            this.label3.Text = "英文：";
             // 
             // tbChn
             // 
@@ -108,9 +108,9 @@ namespace StudentGrade
             this.label1.Font = new System.Drawing.Font("新細明體", 16F);
             this.label1.Location = new System.Drawing.Point(11, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 22);
+            this.label1.Size = new System.Drawing.Size(66, 22);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Chinese :";
+            this.label1.Text = "國文 :";
             // 
             // tbName
             // 
@@ -126,9 +126,9 @@ namespace StudentGrade
             this.lbname.Font = new System.Drawing.Font("新細明體", 16F);
             this.lbname.Location = new System.Drawing.Point(11, 15);
             this.lbname.Name = "lbname";
-            this.lbname.Size = new System.Drawing.Size(77, 22);
+            this.lbname.Size = new System.Drawing.Size(76, 22);
             this.lbname.TabIndex = 8;
-            this.lbname.Text = "Name : ";
+            this.lbname.Text = "姓名：";
             // 
             // btnAdd
             // 
@@ -137,7 +137,7 @@ namespace StudentGrade
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(139, 32);
             this.btnAdd.TabIndex = 16;
-            this.btnAdd.Text = "Add Student Data";
+            this.btnAdd.Text = "新增一筆";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -148,7 +148,7 @@ namespace StudentGrade
             this.btnRnd.Name = "btnRnd";
             this.btnRnd.Size = new System.Drawing.Size(139, 32);
             this.btnRnd.TabIndex = 17;
-            this.btnRnd.Text = "Add Random Data";
+            this.btnRnd.Text = "新增隨機一筆";
             this.btnRnd.UseVisualStyleBackColor = true;
             this.btnRnd.Click += new System.EventHandler(this.btnRnd_Click);
             // 
@@ -160,7 +160,7 @@ namespace StudentGrade
             this.btnSta.Name = "btnSta";
             this.btnSta.Size = new System.Drawing.Size(139, 32);
             this.btnSta.TabIndex = 18;
-            this.btnSta.Text = "Statistics";
+            this.btnSta.Text = "統計";
             this.btnSta.UseVisualStyleBackColor = true;
             this.btnSta.Click += new System.EventHandler(this.btnSta_Click);
             // 
@@ -171,7 +171,7 @@ namespace StudentGrade
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(139, 32);
             this.btnReset.TabIndex = 20;
-            this.btnReset.Text = "Reset";
+            this.btnReset.Text = "清除所有";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
@@ -182,7 +182,7 @@ namespace StudentGrade
             this.btnRandomAdd.Name = "btnRandomAdd";
             this.btnRandomAdd.Size = new System.Drawing.Size(139, 32);
             this.btnRandomAdd.TabIndex = 21;
-            this.btnRandomAdd.Text = "Add 20 Random";
+            this.btnRandomAdd.Text = "隨機加入20筆";
             this.btnRandomAdd.UseVisualStyleBackColor = true;
             this.btnRandomAdd.Click += new System.EventHandler(this.btnRandomAdd_Click);
             // 
@@ -203,17 +203,21 @@ namespace StudentGrade
             this.listSub.UseCompatibleStateImageBehavior = false;
             this.listSub.View = System.Windows.Forms.View.Details;
             // 
+            // 總分
+            // 
+            this.總分.Text = "科目";
+            // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Chinese";
+            this.columnHeader2.Text = "國文";
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "English";
+            this.columnHeader3.Text = "英文";
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Math";
+            this.columnHeader4.Text = "數學";
             // 
             // listMain
             // 
@@ -229,7 +233,7 @@ namespace StudentGrade
             this.listMain.GridLines = true;
             this.listMain.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listMain.HideSelection = false;
-            this.listMain.Location = new System.Drawing.Point(169, 12);
+            this.listMain.Location = new System.Drawing.Point(170, 12);
             this.listMain.Name = "listMain";
             this.listMain.Size = new System.Drawing.Size(565, 316);
             this.listMain.TabIndex = 24;
@@ -238,36 +242,37 @@ namespace StudentGrade
             // 
             // colName
             // 
-            this.colName.Text = "Name";
+            this.colName.Text = "姓名";
+            this.colName.Width = 61;
             // 
             // colChn
             // 
-            this.colChn.Text = "Chinese";
+            this.colChn.Text = "國文";
             // 
             // colEng
             // 
-            this.colEng.Text = "English";
+            this.colEng.Text = "英文";
             // 
             // colmath
             // 
-            this.colmath.Text = "Math";
+            this.colmath.Text = "數學";
             // 
             // coltotal
             // 
-            this.coltotal.Text = "Total";
+            this.coltotal.Text = "總分";
             // 
             // colavg
             // 
-            this.colavg.Text = "AVG.";
+            this.colavg.Text = "平均";
             // 
             // colmin
             // 
-            this.colmin.Text = "Min.";
+            this.colmin.Text = "最低分";
             this.colmin.Width = 100;
             // 
             // colmax
             // 
-            this.colmax.Text = "Max.";
+            this.colmax.Text = "最高分";
             this.colmax.Width = 100;
             // 
             // frmSGE

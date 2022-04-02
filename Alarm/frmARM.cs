@@ -10,7 +10,6 @@ namespace Alarm
     {
         bool start = false;
         DateTime dt; 
-
         public frmARM()
         {
             InitializeComponent();

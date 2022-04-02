@@ -1,5 +1,6 @@
 ﻿using StudentGrade;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace StudentGrade_List
@@ -26,7 +27,7 @@ namespace StudentGrade_List
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrWhiteSpace(tbName.Text)||String.IsNullOrWhiteSpace(tbChn.Text)|| String.IsNullOrWhiteSpace(tbEng.Text)|| String.IsNullOrWhiteSpace(tbMath.Text))
+            if (String.IsNullOrWhiteSpace(tbName.Text) || String.IsNullOrWhiteSpace(tbChn.Text) || String.IsNullOrWhiteSpace(tbEng.Text) || String.IsNullOrWhiteSpace(tbMath.Text))
             {
                 MessageBox.Show("尚未輸入值");
             }
@@ -39,7 +40,7 @@ namespace StudentGrade_List
                     eng = Convert.ToDouble(tbEng.Text),
                     math = Convert.ToDouble(tbMath.Text)
                 };
-                string[,] list = new string[3, 2] { { stu.chn.ToString(), "Chinese" }, { stu.eng.ToString(), "English" }, { stu.math.ToString(), "Math" } };
+                string[,] list = new string[3, 2] { { stu.chn.ToString(), "國文" }, { stu.eng.ToString(), "英文" }, { stu.math.ToString(), "數學" } };
                 stu.CalculateTol();
                 stu.CalculateAvg();
                 Sort.BubbleSort(list);
@@ -47,7 +48,7 @@ namespace StudentGrade_List
                 if (chk)
                 {
                     listMain.Items.Clear();
-                    for(int j = 0; j < array.GetLength(0); j++)
+                    for (int j = 0; j < array.GetLength(0); j++)
                     {
                         ListViewItem item_old = new ListViewItem();
                         item_old.SubItems[0].Text = array[j, 0];
@@ -70,9 +71,23 @@ namespace StudentGrade_List
                 item.SubItems.Add(list[0, 1] + " " + list[0, 0]);
                 item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
                 listMain.Items.Add(item);
+
+                item.UseItemStyleForSubItems = false;
+                if (stu.chn < 60)
+                {
+                    item.SubItems[1].ForeColor = Color.Red;
+                }
+                if (stu.eng < 60)
+                {
+                    item.SubItems[2].ForeColor = Color.Red;
+                }
+                if (stu.math < 60)
+                {
+                    item.SubItems[3].ForeColor = Color.Red;
+                }
                 count_click++;
                 btnRemove.Enabled = true;
-            }          
+            }
         }
         private void btnInsert_Click(object sender, EventArgs e)
         {
@@ -89,7 +104,7 @@ namespace StudentGrade_List
                     eng = Convert.ToDouble(tbEng.Text),
                     math = Convert.ToDouble(tbMath.Text)
                 };
-                string[,] list = new string[3, 2] { { stu.chn.ToString(), "Chinese" }, { stu.eng.ToString(), "English" }, { stu.math.ToString(), "Math" } };
+                string[,] list = new string[3, 2] { { stu.chn.ToString(), "國文" }, { stu.eng.ToString(), "英文" }, { stu.math.ToString(), "數學" } };
 
                 stu.CalculateTol();
                 stu.CalculateAvg();
@@ -122,13 +137,27 @@ namespace StudentGrade_List
                 item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
                 listMain.Items.Insert(0, item);
 
+                item.UseItemStyleForSubItems = false;
+                if (stu.chn < 60)
+                {
+                    item.SubItems[1].ForeColor = Color.Red;
+                }
+                if (stu.eng < 60)
+                {
+                    item.SubItems[2].ForeColor = Color.Red;
+                }
+                if (stu.math < 60)
+                {
+                    item.SubItems[3].ForeColor = Color.Red;
+                }
+
                 count_click++;
                 btnRemove.Enabled = true;
-            }            
-        } 
+            }
+        }
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (this.listMain.Items.Count>0)
+            if (this.listMain.Items.Count > 0)
             {
                 ListViewItem item = new ListViewItem();
                 listMain.Items.RemoveAt(0);
@@ -141,59 +170,23 @@ namespace StudentGrade_List
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            listMain.Items.Clear(); 
+            listMain.Items.Clear();
             listSub.Items.Clear();
-            array = new string[3, 2] ;
+            array = new string[3, 2];
             btnRemove.Enabled = false;
-        }
-
-        private void btnRandomAdd_Click(object sender, EventArgs e)
-        {
-            Random rnd = new Random();
-
-            for (int num = 0; num < 20; num++)
-            {
-                Sort sort = new Sort();
-                Student stu = new Student()
-                {
-                    chn = rnd.Next(0, 100),
-                    eng = rnd.Next(0, 100),
-                    math = rnd.Next(0, 100)
-                };
-                string[,] list = new string[3, 2] { { stu.chn.ToString(), "Chinese" }, { stu.eng.ToString(), "English" }, { stu.math.ToString(), "Math" } };
-
-                stu.CalculateTol();
-                stu.CalculateAvg();
-                Sort.BubbleSort(list);
-
-
-                ListViewItem item = new ListViewItem();
-                item.SubItems[0].Text = i++.ToString();
-                item.SubItems.Add(stu.chn.ToString());
-                item.SubItems.Add(stu.eng.ToString());
-                item.SubItems.Add(stu.math.ToString());
-                item.SubItems.Add(stu.tol.ToString());
-                item.SubItems.Add(stu.avg.ToString());
-                item.SubItems.Add(list[0, 1] + " " + list[0, 0]);
-                item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
-                listMain.Items.Add(item);
-                count_click++;
-            }
-
-            btnRemove.Enabled = true;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
             {
-                if (String.IsNullOrWhiteSpace(tbSearchMin.Text) || String.IsNullOrWhiteSpace(tbSearchMax.Text))
+                if (String.IsNullOrWhiteSpace(tbSearchMin.Text) || String.IsNullOrWhiteSpace(tbSearchMax.Text)|| comboBox1.SelectedItem == null)
                 {
-                    MessageBox.Show("Max/Min Scope is empty");
+                    MessageBox.Show("搜尋欄位未填寫完整");
                 }
                 else if (int.Parse(tbSearchMin.Text) > int.Parse(tbSearchMax.Text))
                 {
-                    MessageBox.Show("Min Scope is smaller than Max Scope");
+                    MessageBox.Show("最低設定分數高於最高設定分數");
                 }
                 else
                 {
@@ -210,7 +203,21 @@ namespace StudentGrade_List
 
                     for (int j = 0; j < array.GetLength(0); j++)
                     {
-                        int num = int.Parse(array[j, 1]); //Chinese Grade
+                        int num = 0;
+
+                        switch (comboBox1.SelectedItem.ToString())
+                        {
+                            case "國文":
+                                num = int.Parse(array[j, 1]);
+                                break;
+                            case "英文":
+                                num = int.Parse(array[j, 2]);
+                                break;
+                            case "數學":
+                                num = int.Parse(array[j, 3]);
+                                break;
+                        }
+
                         if (num > int.Parse(tbSearchMin.Text) && num < int.Parse(tbSearchMax.Text))
                         {
                             ListViewItem item = new ListViewItem();
@@ -292,5 +299,6 @@ namespace StudentGrade_List
             item111.SubItems.Add(arry_math[0].ToString());
             listSub.Items.Add(item111);
         }
+
     }
 }
