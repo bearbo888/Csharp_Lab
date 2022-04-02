@@ -54,7 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="class.cs" />
     <EmbeddedResource Include="frmSGE.resx">
       <DependentUpon>frmSGE.cs</DependentUpon>
     </EmbeddedResource>

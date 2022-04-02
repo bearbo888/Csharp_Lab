@@ -12,14 +12,22 @@ namespace PictureViewer
 {
     public partial class show : Form
     {
+        string path = "";
         public show()
         {
             InitializeComponent();
         }
 
-        public show(string path)
+        private void show_Load(object sender, EventArgs e)
+        {
+            
+            pictureBox1.Image = Image.FromFile(path);
+        }
+
+        public string sendPath(string spath)
         {
 
+            return path = spath;
         }
     }
 }

@@ -42,7 +42,7 @@ namespace StudentGrade
                     eng = Convert.ToDouble(tbEng.Text),
                     math = Convert.ToDouble(tbMath.Text)
                 };
-                string[,] list = new string[3,2] { { stu.chn.ToString(), "Chinese"}, { stu.eng.ToString(), "English"}, { stu.math.ToString(), "Math"} };
+                string[,] list = new string[3,2] { { stu.chn.ToString(), "國文"}, { stu.eng.ToString(), "英文"}, { stu.math.ToString(), "數學"} };
 
                 stu.CalculateTol();
                 stu.CalculateAvg();
@@ -50,14 +50,29 @@ namespace StudentGrade
                 Sort.BubbleSort(list);
 
                 ListViewItem item = new ListViewItem();
-                item.SubItems[0].Text = tbName.Text;
-                item.SubItems.Add(stu.chn.ToString());
-                item.SubItems.Add(stu.eng.ToString());
+                item.SubItems[0].Text = tbName.Text;              
+                item.SubItems.Add(stu.chn.ToString());        
+                item.SubItems.Add(stu.eng.ToString());        
                 item.SubItems.Add(stu.math.ToString());
                 item.SubItems.Add(stu.tol.ToString());
                 item.SubItems.Add(stu.avg.ToString());
                 item.SubItems.Add(list[0, 1] + " " + list[0, 0]);
                 item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
+
+                item.UseItemStyleForSubItems = false;
+
+                if (stu.chn < 60)
+                {
+                    item.SubItems[1].ForeColor = Color.Red;
+                }
+                if (stu.eng < 60)
+                {
+                    item.SubItems[2].ForeColor = Color.Red;
+                }
+                if (stu.math < 60)
+                {
+                    item.SubItems[3].ForeColor = Color.Red;
+                }
                 listMain.Items.Add(item);
                 count_click++;
                 btnSta.Enabled = true;
@@ -73,7 +88,7 @@ namespace StudentGrade
                 eng = rnd.Next(0, 100),
                 math = rnd.Next(0, 100)
             };
-            string[,] list = new string[3, 2] { { stu.chn.ToString(), "Chinese" }, { stu.eng.ToString(), "English" }, { stu.math.ToString(), "Math" } };
+            string[,] list = new string[3, 2] { { stu.chn.ToString(), "國文" }, { stu.eng.ToString(), "英文" }, { stu.math.ToString(), "數學" } };
 
             stu.CalculateTol();
             stu.CalculateAvg();
@@ -81,7 +96,8 @@ namespace StudentGrade
 
 
             ListViewItem item = new ListViewItem();
-            item.SubItems[0].Text = i++.ToString();
+            Name na = new Name();
+            item.SubItems[0].Text = na.GetName();
             item.SubItems.Add(stu.chn.ToString());
             item.SubItems.Add(stu.eng.ToString());
             item.SubItems.Add(stu.math.ToString());
@@ -90,6 +106,20 @@ namespace StudentGrade
             item.SubItems.Add(list[0, 1] + " " + list[0, 0]);
             item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
             listMain.Items.Add(item);
+
+            item.UseItemStyleForSubItems = false;
+            if (stu.chn < 60)
+            {
+                item.SubItems[1].ForeColor = Color.Red;
+            }
+            if (stu.eng < 60)
+            {
+                item.SubItems[2].ForeColor = Color.Red;
+            }
+            if (stu.math < 60)
+            {
+                item.SubItems[3].ForeColor = Color.Red;
+            }
             count_click++;
             btnSta.Enabled = true;
         }
@@ -165,6 +195,7 @@ namespace StudentGrade
         private void btnRandomAdd_Click(object sender, EventArgs e)
         {
             Random rnd = new Random();
+            Name na = new Name();
 
             for (int num = 0; num < 20; num++)
             {
@@ -175,7 +206,7 @@ namespace StudentGrade
                     eng = rnd.Next(0, 100),
                     math = rnd.Next(0, 100)
                 };
-                string[,] list = new string[3, 2] { { stu.chn.ToString(), "Chinese" }, { stu.eng.ToString(), "English" }, { stu.math.ToString(), "Math" } };
+                string[,] list = new string[3, 2] { { stu.chn.ToString(), "國文" }, { stu.eng.ToString(), "英文" }, { stu.math.ToString(), "數學" } };
 
                 stu.CalculateTol();
                 stu.CalculateAvg();
@@ -183,7 +214,7 @@ namespace StudentGrade
 
 
                 ListViewItem item = new ListViewItem();
-                item.SubItems[0].Text = i++.ToString();
+                item.SubItems[0].Text = na.GetName();
                 item.SubItems.Add(stu.chn.ToString());
                 item.SubItems.Add(stu.eng.ToString());
                 item.SubItems.Add(stu.math.ToString());
@@ -192,6 +223,20 @@ namespace StudentGrade
                 item.SubItems.Add(list[0, 1] + " " + list[0, 0]);
                 item.SubItems.Add(list[2, 1] + " " + list[2, 0]);
                 listMain.Items.Add(item);
+                item.UseItemStyleForSubItems = false;
+
+                if (stu.chn < 60)
+                {
+                    item.SubItems[1].ForeColor = Color.Red;
+                }
+                if (stu.eng < 60)
+                {
+                    item.SubItems[2].ForeColor = Color.Red;
+                }
+                if (stu.math < 60)
+                {
+                    item.SubItems[3].ForeColor = Color.Red;
+                }
                 count_click++;
             }
 
